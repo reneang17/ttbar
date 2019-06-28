@@ -1,0 +1,43 @@
+#-----------------------------------------------------------------------------
+# Reduction at NLO
+#-----------------------------------------------------------------------------
+
+# This is the sequence of runs needed to perform NLO ruduction with IdSolver.
+
+rm PR* finalsubstitutions; idrm.sh
+
+generate-admin-files.py ../../startinglistNLO.txt 1 1 1 1 1 -1
+
+sh generate-identities.sh
+
+./solve_integrals integrals out ep ap a c
+
+form final-result.frm
+
+
+
+
+
+
+#-----------------------------------------------------------------------------
+# Some old stuff, kept just in case
+
+./generate-prototypes.py > integrals
+./generate-logfiles.py PR0 -i integrals
+./read_identities PR0 0 59 0 ep a c ap qT2
+./print_identities PR0 out
+./solve_integrals int Substitutions ep a c ap qT2
+
+# With number_of_scalars=number_of_denominators=6, the value of n, the maximal
+# sum of numerators is irrelevant.
+
+# Other old nlo runs:
+
+./generate-identities.py ../../startinglistNLO.txt -i integrals  (obsolete)
+./determine_masters PR0 6 6 1 0 1 1 ep ap a c qT2
+
+./print_identities PR3 out3
+./print_identities PR4 out4
+
+grep id out3 | grep "PR3(2,1,1"
+grep id out4 | grep "PR4(2,1,1"

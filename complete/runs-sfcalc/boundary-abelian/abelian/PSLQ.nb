@@ -1,0 +1,267 @@
+(************** Content-type: application/mathematica **************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      9419,        218]*)
+(*NotebookOutlinePosition[     10065,        240]*)
+(*  CellTagsIndexPosition[     10021,        236]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    RowBox[{\(PSLQ[inx_List, prec_]\), ":=", "\[IndentingNewLine]", 
+      RowBox[{"Block", "[", "\[IndentingNewLine]", 
+        RowBox[{\({\[IndentingNewLine]x, \[IndentingNewLine]n = 
+              Length[inx], \[IndentingNewLine]\[Gamma] = 
+              2/\@3, \[IndentingNewLine]A, B, H, D, Dinv, t, i, j, k, l, 
+            iter, \[IndentingNewLine]\[Alpha], \[Beta], \[Lambda], \[Delta], 
+            r, R\[IndentingNewLine]}\), ",", "\[IndentingNewLine]", 
+          StyleBox[\( (*Initialize*) \),
+            FontColor->GrayLevel[0.666667]], "\[IndentingNewLine]", 
+          
+          RowBox[{\(x = N[inx\ /\@\(inx\  . \ inx\), prec]\), ";", 
+            "\[IndentingNewLine]", \(s = 
+              Sqrt[MapIndexed[Plus @@ Drop[x\^2, First[#2] - 1] &, x]]\), ";",
+             "\[IndentingNewLine]", \(A = \(B = IdentityMatrix[n]\)\), ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"H", "=", 
+              RowBox[{"Table", "[", 
+                RowBox[{
+                  RowBox[{"Which", "[", "\[IndentingNewLine]", 
+                    
+                    RowBox[{\(i > j\), 
+                      ",", \(\(\(-x[\([i]\)]\)*x[\([j]\)]\)\/\(s[\([j]\)]*
+                            s[\([j + 1]\)]\)\), 
+                      StyleBox[",",
+                        "MR"], "\[IndentingNewLine]", \(i \[Equal] j\), 
+                      StyleBox[",",
+                        "MR"], \(s[\([i + 1]\)]\/s[\([i]\)]\), ",", 
+                      "\[IndentingNewLine]", \(i < j\), ",", "0"}], 
+                    "\[IndentingNewLine]", "]"}], ",", \({i, 1, n}\), 
+                  ",", \({j, 1, n - 1}\)}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            StyleBox[\( (*\ Reduce\ H\ *) \),
+              FontColor->GrayLevel[0.666667]], 
+            "\[IndentingNewLine]", \(t = HermiteReduce[H]\), ";", 
+            "\[IndentingNewLine]", \(D = First[t]\), ";", 
+            "\[IndentingNewLine]", \(Dinv\  = \ Inverse[D]\), ";", 
+            "\[IndentingNewLine]", 
+            StyleBox[\( (*Update*) \),
+              FontColor->GrayLevel[0.666667]], 
+            "\[IndentingNewLine]", \(H = Last[t]\), ";", \(x = x . Dinv\), 
+            ";", \(A = D . A\), ";", \(B = B . Dinv\), ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"For", "[", 
+              
+              RowBox[{\(iter = 0\), ",", \(iter < $IterationLimit\), 
+                ",", \(++iter\), ",", "\[IndentingNewLine]", 
+                StyleBox[\( (*\ Step\ One\ *) \),
+                  FontColor->GrayLevel[0.666667]], "\[IndentingNewLine]", 
+                
+                RowBox[{\(r = 
+                    MaxIndex[
+                      MapIndexed[\(\[Gamma]\^First[#2]\) Abs[#1] &, 
+                        Tr[H, List]]]\), ";", 
+                  "\[IndentingNewLine]", \(If[
+                    r < n - 1, \[Alpha] = H[\([r, r]\)]; \[Beta] = 
+                      H[\([r + 1, r]\)]; \[Lambda] = 
+                      H[\([r + 1, 
+                          r + 1]\)]; \[Delta] = \@\(\[Beta]\^2 + \[Lambda]\^2\
+\)]\), ";", "\[IndentingNewLine]", \(R = IdentityMatrix[n]\), 
+                  ";", \(t = R[\([r]\)]\), 
+                  ";", \(R[\([r]\)] = R[\([r + 1]\)]\), 
+                  ";", \(R[\([r + 1]\)] = t\), ";", 
+                  "\[IndentingNewLine]", \(x = x . R\), ";", \(H = R . H\), 
+                  ";", \(A = R . A\), ";", \(B = B . R\), ";", 
+                  "\[IndentingNewLine]", 
+                  StyleBox[\( (*\ Step\ Two\ *) \),
+                    FontColor->GrayLevel[0.666667]], 
+                  "\[IndentingNewLine]", \(If[
+                    r < n - 1, \[IndentingNewLine]H = 
+                      H . Table[\[IndentingNewLine]Which[\[IndentingNewLine]i \
+\[Equal] r && j \[Equal] r, \[Beta]/\[Delta], \[IndentingNewLine]i \[Equal] 
+                                r && j \[Equal] 
+                                r + 1, \(-\[Lambda]\)/\[Delta], \
+\[IndentingNewLine]i \[Equal] r + 1 && 
+                              j \[Equal] 
+                                r, \[Lambda]/\[Delta], \[IndentingNewLine]i \
+\[Equal] r + 1 && j \[Equal] r + 
+                                  1, \[Beta]/\[Delta], \[IndentingNewLine]i \
+\[Equal] j && j \[NotEqual] r || i \[Equal] j && j \[NotEqual] r + 1, 
+                            1, \[IndentingNewLine]True, 
+                            0], \[IndentingNewLine]{i, 1, n - 1}, {j, 1, 
+                            n - 1}]\[IndentingNewLine]]\), ";", 
+                  "\[IndentingNewLine]", 
+                  StyleBox[\( (*\ Step\ Three\ *) \),
+                    FontColor->GrayLevel[0.666667]], 
+                  "\[IndentingNewLine]", \(t = HermiteReduce[H]\), ";", 
+                  "\[IndentingNewLine]", \(D = First[t]\), ";", 
+                  "\[IndentingNewLine]", \(Dinv\  = \ Inverse[D]\), ";", 
+                  "\[IndentingNewLine]", 
+                  StyleBox[\( (*Update*) \),
+                    FontColor->GrayLevel[0.666667]], 
+                  "\[IndentingNewLine]", \(H = Last[t]\), 
+                  ";", \(x = x . Dinv\), ";", \(A = D . A\), 
+                  ";", \(B = B . Dinv\), ";", "\[IndentingNewLine]", 
+                  StyleBox[\( (*\ Step\ Four\ *) \),
+                    FontColor->GrayLevel[0.666667]], 
+                  "\[IndentingNewLine]", \(If[
+                    Min[Abs[Union[x, Tr[H, List]]]] <= 10\^\(\(-prec\) + 5\), 
+                    Break[]]\)}]}], "\[IndentingNewLine]", "]"}], ";", 
+            StyleBox[\( (*Main\ Iteraton*) \),
+              FontColor->GrayLevel[0.666667]], 
+            "\[IndentingNewLine]", \(Return[\(Transpose[
+                  B]\)[\([MaxIndex[\(-Abs[x]\)]]\)]]\)}]}], 
+        "\[IndentingNewLine]", "]"}]}]], "Input"],
+
+Cell[BoxData[
+    \(\(Recognize2[n_, po_, v_] := 
+        PSLQ[N[Table[n\^i, {i, 0, po}], 100], 100] . 
+          Table[v\^i, {i, 0, po}];\)\)], "Input"],
+
+Cell[BoxData[
+    \(MaxIndex[x_List] := \ 
+      Block[{i = 1, j}, 
+        Do[If[x[\([j]\)] > x[\([i]\)], i = j], {j, 2, Length[x]}]; 
+        i]\)], "Input"],
+
+Cell[BoxData[
+    \(HermiteReduce[H_] := 
+      Block[\[IndentingNewLine]{n = Length[H], i, j, k, q, H2 = H, 
+          D = IdentityMatrix[
+              Length[H]]}, \[IndentingNewLine]Do[\[IndentingNewLine]q = 
+            Round[H[\([i, j]\)]\/H[\([j, j]\)]]; \[IndentingNewLine]Do[
+            H2[\([i, k]\)] -= q\ H2[\([j, k]\)], {k, 1, 
+              j}]; \[IndentingNewLine]Do[
+            D[\([i, k]\)] -= q\ D[\([j, k]\)], {k, 1, 
+              n}];\[IndentingNewLine], {i, 2, n}, {j, i - 1, 
+            1, \(-1\)}]; \[IndentingNewLine]{D, 
+          H2}\[IndentingNewLine]]\)], "Input"],
+
+Cell[TextData[StyleBox["The following demonstrates that the PSLQ algorithm \
+can be used to find a polynomial that has a specified algebraic number as one \
+of it's roots:",
+  FontColor->RGBColor[0, 0, 1]]], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Recognize2[N[\@\(5 - \@2\), 100], 5, x]\)], "Input"],
+
+Cell[BoxData[
+    \(23 - 10\ x\^2 + x\^4\)], "Output"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["A simple check shows that the surd is indeed one of \
+the roots of the output:",
+  FontColor->RGBColor[0, 0, 1]]], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Solve[% \[Equal] 0, x] // TableForm\)], "Input"],
+
+Cell[BoxData[
+    TagBox[GridBox[{
+          {\(x \[Rule] \(-\@\(5 - \@2\)\)\)},
+          {\(x \[Rule] \@\(5 - \@2\)\)},
+          {\(x \[Rule] \(-\@\(5 + \@2\)\)\)},
+          {\(x \[Rule] \@\(5 + \@2\)\)}
+          },
+        RowSpacings->1,
+        ColumnSpacings->3,
+        RowAlignments->Baseline,
+        ColumnAlignments->{Left}],
+      Function[ BoxForm`e$, 
+        TableForm[ BoxForm`e$]]]], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"4.1 for Microsoft Windows",
+ScreenRectangle->{{0, 1600}, {0, 1147}},
+WindowSize->{1592, 1115},
+WindowMargins->{{0, Automatic}, {0, Automatic}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1705, 50, 5739, 104, 1972, "Input"],
+Cell[7447, 156, 153, 3, 56, "Input"],
+Cell[7603, 161, 159, 4, 55, "Input"],
+Cell[7765, 167, 596, 11, 382, "Input"],
+Cell[8364, 180, 215, 3, 61, "Text"],
+
+Cell[CellGroupData[{
+Cell[8604, 187, 72, 1, 75, "Input"],
+Cell[8679, 190, 54, 1, 56, "Output"]
+}, Open  ]],
+Cell[8748, 194, 146, 2, 61, "Text"],
+
+Cell[CellGroupData[{
+Cell[8919, 200, 68, 1, 55, "Input"],
+Cell[8990, 203, 413, 12, 242, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

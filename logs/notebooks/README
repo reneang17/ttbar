@@ -1,0 +1,31 @@
+
+-----------------------------------------------------------------------------
+To produce the .hh and .cc files, which built the topqT++ program, one needs to
+run:
+
+   $ math -run -noprompt < GenerateCppCodeHardFunction.m
+   (this will generate hard.hh, hardqq.cc, hardgg.cc)
+    
+
+   $ math -run -noprompt < GenerateCppCodeSoftFunction.m
+   (this will generate soft.hh, soft.cc)
+
+-----------------------------------------------------------------------------
+Three types of files:
+
+  Name.m
+
+    These files contain basic building blocks used to construct the final
+    program. They are either copied from existing literature or calculated in
+    the CalculateName.m modules. Or both.
+
+  CheckName.m
+
+    Here I perform checks of quantities from Name.m. These include both
+    comparisons to literature and internal consistency checks. Once in a while,
+    one should run all these files.
+
+  CalculateName.m
+
+    Here I calculate quantities and the result is saved in a separate module,
+    which then can be used by the final Mathematica program.

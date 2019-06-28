@@ -1,0 +1,249 @@
+Detailed description of the tools:
+
+################################################################################
+
+determine_masters [-n] [-f prototypes | prototype nscalars ndeno d n]
+       dm nm symbols
+
+       Generates and solves identities for a given prototype, and prints the
+       determined master integrals to stdout. The number of denominators is
+       ndeno, whereas d and n are the maximal sums of denominator and numerator
+       powers respectively. Alternatively, with the option -f the solution
+       parameters will be read from the prototypes file. The master integrals
+       are defined as unassigned integrals, whose sums of denominator and
+       numerator powers fall within the [dm,nm] range. The option -n results in
+       master integrals with irreducible numerators.
+
+       Symbols have to be specified for fermat. They have to be given values by
+       appending an equality sign and a rational number, e.g. ep=1/5. The number
+       should be chosen in such a way, that vanishing coefficients are uniquely
+       identified. A rule of thumb is to use inverses of relatively large
+       primes.
+
+       The generation can be safely interrupted with SIGTERM, whereas SIGUSR1
+       and SIGXCPU are ignored.
+
+################################################################################
+
+generate_identities [-aensv] [-c firstid] [-d slot] [-f prototypes | 
+       prototype nscalars ndeno d n] symbols
+
+       Generates and stores identities for a given prototype, with ndeno being
+       the number of denominators and d and n the maximal sums of the powers of
+       denominators and numerators respectively.
+
+       Symbols have to be specified for fermat. They have to be given values by
+       appending an equality sign and a rational number, e.g. ep=1/5. The
+       number should be chosen in such a way, that vanishing coefficients are
+       uniquely identified. A rule of thumb is to use inverses of relatively
+       large primes.
+
+       The options are:
+
+       -a - instead of generating identities with sums of powers of
+            denominators and numerators running from 0 to d and n respectively,
+            the sums of powers are fixed at d and n. this option implies -e.
+
+       -c - start the identity counter at firstid. this option is overridden by
+            the presence of an IdSolverDump file and mutually exclusive with
+            option -d.
+
+       -d - start the identity counter at slot*ndeno, where ndeno is the number
+            of denominators of the current prototype. this option is useful
+            in combination with option -f to make space for corrections.
+
+       -e - start the identity counter at the last identity number in the
+            database of the current prototype.
+
+       -f - use the solution specification from the prototypes file.
+
+       -n - reduce to master integrals with irreducible numerators.
+
+       -s - in combination with option -a, symmetries are generated instead of
+            identities.
+
+       -v - verbose.
+
+       The generation can be safely interrupted with SIGTERM, whereas SIGUSR1
+       and SIGXCPU are ignored.
+
+################################################################################
+
+generation_points [-s startingpoint] nscalars ndeno d n
+
+       Generates the points for identity generation within [d,n] ranges. One
+       can specify a starting point that should be a list of powers separated
+       by spaces as in the IdSolverDump file, e.g. -s '1 1 0'.
+
+################################################################################
+
+large_database small large [ndivisions]
+
+       Takes the small database (Depot) and makes a large database (Curia).
+       The number ndivisions is the number of databases within the large
+       database directory. It determines the maximum size of the database to be
+       ndivisions x 2GB. The default is ndivisions = 5.
+
+################################################################################
+
+parse_integrals [-f] integrals [mind [minn] ]
+
+       Takes a list of integrals, sorts it and determines the maximal sums of
+       powers of denominators and numerators for each prototype and its
+       children. The optional numbers mind and minn are the minimum sums of
+       powers for the denominators and numerators respectively. The output
+       is a list made of prototype name, number of scalars, number of
+       denominators, sum of denominator powers and sum of numerator powers.
+       With option -f full statistics are printed.
+
+################################################################################
+
+print_identities prototype output
+
+       Prints stored identities for the specified prototype.
+
+################################################################################
+
+print_integrals prototype output [d n]
+
+       Generates fill statements in FORM format for all of the integrals of the
+       given prototype.
+
+       d - sum of denominator powers
+       n - sum of numerator powers
+
+       if d and n are given, then only those integrals are written whose
+       reduction does only contain integrals which denominator and numerator
+       powers fall into the [d,n] range.
+
+################################################################################
+
+read_identities [-n] prototype begin end firstid symbols
+
+       Reads in identity files with names <begin>.log...<end>.log, produced
+       with FORM and writes them to the database id<prototype>.dat. The first
+       identity will have number firstid.
+
+       Symbols have to be specified for fermat. They have to be given values by
+       appending an equality sign and a rational number, e.g. ep=1/5. The number
+       should be chosen in such a way, that vanishing coefficients are uniquely
+       identified. A rule of thumb is to use inverses of relatively large
+       primes.
+
+       The option -n corresponds to master integrals with irreducible
+       numerators.
+
+################################################################################
+
+replace_masters [-s] replacements input output symbols
+
+       Replaces master integrals a list of expressions given in the input file
+       using the solution databases and a replacements file, which is a list
+       of pairs made of the old master integral and a new master integral. The
+       input expressions have to be given in the form expr = ... ; , where
+       expr is some string and the dots stand for an expression containing
+       bracketed integrals, as given by the FORM bracket statement. The list
+       of symbols has to be specified in order for fermat to work correctly.
+       They may be given values by appending an equality sign with the desired
+       value, e.g. ep=1/5. With option -s, the input file should only contain
+       a single expression and nothing else.
+
+################################################################################
+
+resize_database name ndivisions
+
+       Resize a database (Curia), specified by name, to have ndivisions.
+       Afterwards, the maximum size of the database is ndivisions x 2 GB.
+
+################################################################################
+
+shift_identities prototype [shift]
+
+       If called with one argument, gives the lowest and highest identity
+       indices in the prototype identity database. If shift is given, then all
+       the identity indices are shifted.
+
+################################################################################
+
+simplify_expressions [-s] input output symbols
+
+       Simplifies a list of expressions given in the input file using the
+       solution databases. The input expressions have to be given in the form
+       expr = ... ; , where expr is some string and the dots stand for an
+       expression containing bracketed integrals, as given by the FORM bracket
+       statement. The list of symbols has to be specified in order for fermat
+       to work correctly. They may be given values by appending an equality
+       sign with the desired value, e.g. ep=1/5. With option -s, the input
+       file should only contain a single expression and nothing else.
+
+################################################################################
+
+solve_integrals [-s prototype] [-w nints] integrals output symbols
+
+       Generates fill statements in FORM format for all of the integrals. The
+       third argument is a list of symbols that have to be specified in order
+       for fermat to work correctly. They may be given values by appending an
+       equality sign with the desired value, e.g. ep=1/5.
+
+       With option -s, all identities will be stripped to only contain the
+       specified prototype.
+
+       Previously generated identity databases have to be provided in the
+       current directory and the resulting output will be stored in new
+       databases for future use. The calculation can be safely interrupted with
+       SIGTERM. SIGUSR1 and SIGXPU are ignored.
+
+       The status of the calculation is automatically written to databases if
+       more than 5*10^4 integrals are stored in memory. This number can be
+       changed with the -w option.
+
+################################################################################
+
+solve_prototypes [-cnpsv] prototypes [d n [symbols] ]
+
+       Generates the system of files corresponding to the prototypes and, if
+       d and n are specified, solves the integrals within the [d,n] bounds on
+       the sums of the denominator (d) and numerator (n) powers. The user has
+       to create the userdecls, userkinematics and useroutput files with
+       appropriate content.
+
+       The prototypes file may have empty lines and comment lines starting
+       with #, its format is illustrated by the example:
+
+       n 6     # number of nodes
+       e 0 1 x # edge from node 0 to node 1 with mass x
+       e 1 2 1
+       e 1 3 1
+       e 2 3 0
+       e 2 4 1
+       e 3 5 1
+       m +p3 0 # ingoing external momentum p3 on edge 0
+       m -p1 4 # outgoing external momentum p1 on edge 4
+       m -p2 5
+
+       External momentum assignement is optional.
+
+       If integrals are to be solved, the necessary symbols have to be
+       specified for fermat. They may be assigned arbitrary values by appending
+       an equality sign, e.g. ep=1/5.
+
+       The options are:
+
+       -c - create integral databases
+
+       -n - reduce to master integrals with irreducible numerators
+
+       -p - print postscript pictures for all the prototypes
+
+       -s - store identities
+
+       -v - verbose
+
+       The solution can be safely interrupted with SIGTERM, whereas SIGUSR1 and
+       SIGXCPU are ignored.
+
+################################################################################
+
+sort_integrals integrals 
+
+       Takes a list of integrals, sorts it and prints it on standard output.

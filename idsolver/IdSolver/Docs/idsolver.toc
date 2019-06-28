@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}General guidelines}{2}{section.1}
+\contentsline {section}{\numberline {2}Tools directory}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}generate\_identities}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}solve\_integrals}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}read\_identities}{2}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}print\_identities}{3}{subsection.2.4}
+\contentsline {section}{\numberline {3}test directory}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}determine\_masters}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Input files}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Output files}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4}The code}{5}{section.4}

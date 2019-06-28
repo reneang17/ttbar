@@ -1,0 +1,7 @@
+
+   --------------------------------------------------------------
+      Final results and run summary:
+      Process d d~ > t t~ g [QCD]
+      Run at p-p collider (4000.0 + 4000.0 GeV)
+      Total cross section: 6.828e+00 +- 1.2e-01 pb
+   --------------------------------------------------------------

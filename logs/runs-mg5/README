@@ -1,0 +1,27 @@
+
+
+Download aMG5_MC@NLO.
+
+Run Mad Graph:
+
+ $ ./mg5_aMC
+
+ MG5_aMC > import model sm-no_b_mass
+ MG5_aMC > generate d d~ > t t~ j [QCD]
+
+ output ddbarttjnf5
+
+In this directory:
+
+  $ ./installMG5.py [path-to-mg5] ddbarttjnf5
+  cp codemods/makefile_fks_dir [path-to-mg5]/ddbarttjnf5/SubProcess
+
+In MG5/bin:
+
+  $ ./mg5_aMC
+  MG5_aMC > launch ddbartj5
+
+In this directory 
+
+  $ ./update.py ddbarttjResultsNLO
+  

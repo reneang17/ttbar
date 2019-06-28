@@ -1,0 +1,20 @@
+#-----------------------------------------------------------------------------
+# COMPMATH runs
+#-----------------------------------------------------------------------------
+
+For comparison with mathcomp version of topqT++limited one has to perform the
+following runs:
+
+  $ math -run -noprompt < CalculateTotalCrossSections.m real_qg 3
+
+  $ math -run -noprompt < CalculateTotalCrossSections.m real_qq 3
+
+  $ math -run -noprompt < CalculateTotalCrossSections.m real_gg 3
+
+  $ math -run -noprompt < CalculateTotalCrossSections.m virt_qg 3
+
+  $ math -run -noprompt < CalculateTotalCrossSections.m virt_qq 3
+
+  $ math -run -noprompt < CalculateTotalCrossSections.m virt_gg 3
+
+Results in 'compmath.res'.

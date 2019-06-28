@@ -1,0 +1,42 @@
+#-----------------------------------------------------------------------------
+  Notation
+#-----------------------------------------------------------------------------
+
+  LO, NLO, NNLO relate to ttbar  
+
+#-----------------------------------------------------------------------------
+  Main result files
+#-----------------------------------------------------------------------------
+
+  We adopt the following naming convention for the main result files
+  
+    input-NLOreal-ddbarcteq6mE.dat
+    input-NLOreal-gg.dat
+    input-NLOreal-qg.dat
+    input-NLOvirt-qg.dat
+
+#-----------------------------------------------------------------------------
+# Tests
+#-----------------------------------------------------------------------------
+
+  All input files starting with input-test are meant for tests like comparisons
+  with the older version runs-topqT++limited.
+
+
+  # hist_virt_test-allNLO_qT.dat (<- input-test-allNLOvirt.dat)
+
+    Value of the total cross section from this file agrees pefrectly, within
+    errors with results from previous version of the program
+
+    -1221437.396    <->  -1242717.87  + 21303.55  =  -1221414.32
+  
+      (this)              (old subt)   (old virt)
+
+    We also checked that old subt agrees with previous result used in plots (in
+    subt_all.dat).
+
+
+  # hist_real_test-allNLO_qT.dat (<- input-test-allNLOreal.dat)
+
+    Perfect agreement with analogous real result from older version of the
+    program.

@@ -1,0 +1,4 @@
+
+Slicing plots are for now stored still in the old ttbar repository. There, one
+can change a path in extract-cross-sections.py, in order to plot results for
+total cross sections from this repository.

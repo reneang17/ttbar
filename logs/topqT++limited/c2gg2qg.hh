@@ -1,0 +1,43 @@
+#ifndef __C2GG2QG_H__
+#define __C2GG2QG_H__
+
+#include <heplib/MathematicaC.hh>
+#include "common.hh"
+
+inline double c2gg2qg_real_d(double z, double M, double theta, double mt, double mu, double qT2=0, double zp=0) {
+
+ return 0;
+
+}
+
+inline double c2gg2qg_real_r(double z, double M, double theta, double mt, double mu, double qT2=0, double zp=0) {
+
+ return (-2*CF*(-36*CA*HSgg00 - 18*HSgg10 + 6*CA*HSgg00*Power(Pi,2) + 80*HSgg00*nf*TF - 2*CA*HSgg00*z + 27*CF*HSgg00*z + 18*HSgg10*z - 18*CA*HSgg00*Power(Pi,2)*z - 80*HSgg00*nf*TF*z + 10*CA*HSgg00*Power(z,2) + 54*CF*HSgg00*Power(z,2) - 9*HSgg10*Power(z,2) + 9*HSgg11*Power(z,2) + 3*CA*HSgg00*Power(Pi,2)*Power(z,2) + 40*HSgg00*nf*TF*Power(z,2) - 124*CA*HSgg00*Power(z,3) - 36*CA*HSgg00*Power(z,2)*Log(Power(M,2)/Power(mu,2)) - 132*CA*HSgg00*Log(1 - z) + 108*CF*HSgg00*Log(1 - z) + 48*HSgg00*nf*TF*Log(1 - z) + 132*CA*HSgg00*z*Log(1 - z) - 108*CF*HSgg00*z*Log(1 - z) - 48*HSgg00*nf*TF*z*Log(1 - z) - 138*CA*HSgg00*Power(z,2)*Log(1 - z) + 54*CF*HSgg00*Power(z,2)*Log(1 - z) + 24*HSgg00*nf*TF*Power(z,2)*Log(1 - z) - 36*CA*HSgg00*Power(Log(1 - z),2) + 36*CF*HSgg00*Power(Log(1 - z),2) + 36*CA*HSgg00*z*Power(Log(1 - z),2) - 36*CF*HSgg00*z*Power(Log(1 - z),2) - 18*CA*HSgg00*Power(z,2)*Power(Log(1 - z),2) + 18*CF*HSgg00*Power(z,2)*Power(Log(1 - z),2) + 216*CA*HSgg00*z*Log(z) - 36*CF*HSgg00*z*Log(z) + 162*CA*HSgg00*Power(z,2)*Log(z) - 45*CF*HSgg00*Power(z,2)*Log(z) + 48*CA*HSgg00*Power(z,3)*Log(z) + 72*CA*HSgg00*Log(1 - z)*Log(z) - 72*CA*HSgg00*z*Log(1 - z)*Log(z) + 36*CA*HSgg00*Power(z,2)*Log(1 - z)*Log(z) - 36*CA*HSgg00*z*Power(Log(z),2) + 18*CF*HSgg00*z*Power(Log(z),2) - 18*CA*HSgg00*Power(z,2)*Power(Log(z),2) - 9*CF*HSgg00*Power(z,2)*Power(Log(z),2) + 3*Log(qT2/Power(mu,2))*(230*CA*HSgg00 + 12*HSgg11 - 16*HSgg00*nf*TF - 188*CA*HSgg00*z - 12*CF*HSgg00*z - 12*HSgg11*z + 16*HSgg00*nf*TF*z + 16*CA*HSgg00*Power(z,2) + 3*CF*HSgg00*Power(z,2) + 6*HSgg11*Power(z,2) - 8*HSgg00*nf*TF*Power(z,2) - 24*CA*HSgg00*Power(z,3) - 24*CA*HSgg00*(2 - 2*z + Power(z,2))*Log(Power(M,2)/Power(mu,2)) + 18*CA*HSgg00*(2 - 2*z + Power(z,2))*Log(qT2/Power(mu,2)) - 72*CA*HSgg00*Log(1 - z) - 24*CF*HSgg00*Log(1 - z) + 72*CA*HSgg00*z*Log(1 - z) + 24*CF*HSgg00*z*Log(1 - z) - 36*CA*HSgg00*Power(z,2)*Log(1 - z) - 12*CF*HSgg00*Power(z,2)*Log(1 - z) + 72*CA*HSgg00*Log(z) + 72*CA*HSgg00*z*Log(z) - 12*CF*HSgg00*z*Log(z) + 72*CA*HSgg00*Power(z,2)*Log(z) + 6*CF*HSgg00*Power(z,2)*Log(z)) - 72*CA*HSgg00*Log(z)*Log(1 + z) - 72*CA*HSgg00*z*Log(z)*Log(1 + z) - 36*CA*HSgg00*Power(z,2)*Log(z)*Log(1 + z) - 36*CA*HSgg00*(2 + 2*z + Power(z,2))*PolyLog(2,-z)))/(9.*qT2*Power(z,2));
+
+}
+
+inline double c2gg2qg_real_p(double z, double M, double theta, double mt, double mu, double qT2=0, double zp=0) {
+
+ return 0;
+
+}
+
+inline double c2gg2qg_virt_d(double z, double M, double theta, double mt, double mu, double qT2=0, double zp=0) {
+
+ return 0;
+
+}
+
+inline double c2gg2qg_virt_r(double z, double M, double theta, double mt, double mu, double qT2=0, double zp=0) {
+
+ return (CF*(-6320*CA*HSgg00 + 264*CA*HSgg00*Power(Pi,2) + 896*HSgg00*nf*TF + 6328*CA*HSgg00*z + 540*CF*HSgg00*z - 288*CA*HSgg00*Power(Pi,2)*z - 896*HSgg00*nf*TF*z - 2144*CA*HSgg00*Power(z,2) - 54*CF*HSgg00*Power(z,2) + 108*HSgg10*Power(z,2) + 36*CA*HSgg00*Power(Pi,2)*Power(z,2) + 208*HSgg00*nf*TF*Power(z,2) + 1216*CA*HSgg00*Power(z,3) - 48*CA*HSgg00*Power(Pi,2)*Power(z,3) - 1824*CA*HSgg00*Log(1 - z) + 1728*CF*HSgg00*Log(1 - z) + 480*HSgg00*nf*TF*Log(1 - z) + 1824*CA*HSgg00*z*Log(1 - z) - 1728*CF*HSgg00*z*Log(1 - z) - 480*HSgg00*nf*TF*z*Log(1 - z) - 516*CA*HSgg00*Power(z,2)*Log(1 - z) + 540*CF*HSgg00*Power(z,2)*Log(1 - z) + 96*HSgg00*nf*TF*Power(z,2)*Log(1 - z) - 396*CA*HSgg00*Power(Log(1 - z),2) + 324*CF*HSgg00*Power(Log(1 - z),2) + 144*HSgg00*nf*TF*Power(Log(1 - z),2) + 396*CA*HSgg00*z*Power(Log(1 - z),2) - 324*CF*HSgg00*z*Power(Log(1 - z),2) - 144*HSgg00*nf*TF*z*Power(Log(1 - z),2) - 90*CA*HSgg00*Power(z,2)*Power(Log(1 - z),2) + 54*CF*HSgg00*Power(z,2)*Power(Log(1 - z),2) + 72*HSgg00*nf*TF*Power(z,2)*Power(Log(1 - z),2) - 72*CA*HSgg00*Power(Log(1 - z),3) + 72*CF*HSgg00*Power(Log(1 - z),3) + 72*CA*HSgg00*z*Power(Log(1 - z),3) - 72*CF*HSgg00*z*Power(Log(1 - z),3) - 36*CA*HSgg00*Power(z,2)*Power(Log(1 - z),3) + 36*CF*HSgg00*Power(z,2)*Power(Log(1 - z),3) - 2988*CA*HSgg00*z*Log(z) - 810*CF*HSgg00*z*Log(z) + 72*CA*HSgg00*Power(z,2)*Log(z) + 270*CF*HSgg00*Power(z,2)*Log(z) - 1056*CA*HSgg00*Power(z,3)*Log(z) - 1584*CA*HSgg00*Log(1 - z)*Log(z) + 1728*CA*HSgg00*z*Log(1 - z)*Log(z) - 648*CA*HSgg00*Power(z,2)*Log(1 - z)*Log(z) + 288*CA*HSgg00*Power(z,3)*Log(1 - z)*Log(z) + 216*CA*HSgg00*Power(Log(1 - z),2)*Log(z) - 216*CA*HSgg00*z*Power(Log(1 - z),2)*Log(z) + 108*CA*HSgg00*Power(z,2)*Power(Log(1 - z),2)*Log(z) + 648*CA*HSgg00*z*Power(Log(z),2) - 108*CF*HSgg00*z*Power(Log(z),2) + 162*CA*HSgg00*Power(z,2)*Power(Log(z),2) - 81*CF*HSgg00*Power(z,2)*Power(Log(z),2) + 144*CA*HSgg00*Power(z,3)*Power(Log(z),2) + 216*CA*HSgg00*Log(1 - z)*Power(Log(z),2) - 216*CA*HSgg00*z*Log(1 - z)*Power(Log(z),2) + 108*CA*HSgg00*Power(z,2)*Log(1 - z)*Power(Log(z),2) - 72*CA*HSgg00*z*Power(Log(z),3) + 36*CF*HSgg00*z*Power(Log(z),3) - 36*CA*HSgg00*Power(z,2)*Power(Log(z),3) - 18*CF*HSgg00*Power(z,2)*Power(Log(z),3) - 72*CA*HSgg00*Power(Pi,2)*Log(1 + z) - 72*CA*HSgg00*Power(Pi,2)*z*Log(1 + z) - 36*CA*HSgg00*Power(Pi,2)*Power(z,2)*Log(1 + z) + 216*CA*HSgg00*Power(z,2)*Log(z)*Log(1 + z) - 216*CA*HSgg00*Power(Log(z),2)*Log(1 + z) - 216*CA*HSgg00*z*Power(Log(z),2)*Log(1 + z) - 108*CA*HSgg00*Power(z,2)*Power(Log(z),2)*Log(1 + z) + 144*CA*HSgg00*Power(Log(1 + z),3) + 144*CA*HSgg00*z*Power(Log(1 + z),3) + 72*CA*HSgg00*Power(z,2)*Power(Log(1 + z),3) + 216*CA*HSgg00*(Power(z,2) + (2 + 2*z + Power(z,2))*Log(z))*PolyLog(2,-z) - 12*(-3*(6*CA*HSgg00*(2 - 2*z + Power(z,2))*(Power(Log(Power(mu,2)),3) + 3*Power(Log(Power(mu,-2)),2)*Log(Power(mu,2)/qT2) - Power(Log(qT2),3) + 3*Log(Power(mu,-2))*(Power(Log(Power(mu,2)),2) - Power(Log(qT2),2))) - (Log(Power(mu,2)/qT2)*Log(qT2/Power(mu,2))*(-230*CA*HSgg00 - 12*HSgg11 + 16*HSgg00*nf*TF + 188*CA*HSgg00*z + 12*CF*HSgg00*z + 12*HSgg11*z - 16*HSgg00*nf*TF*z - 16*CA*HSgg00*Power(z,2) - 3*CF*HSgg00*Power(z,2) - 6*HSgg11*Power(z,2) + 8*HSgg00*nf*TF*Power(z,2) + 24*CA*HSgg00*Power(z,3) + 24*CA*HSgg00*(2 - 2*z + Power(z,2))*Log(Power(M,2)/Power(mu,2)) + 12*(3*CA + CF)*HSgg00*(2 - 2*z + Power(z,2))*Log(1 - z) - 72*CA*HSgg00*Log(z) - 72*CA*HSgg00*z*Log(z) + 12*CF*HSgg00*z*Log(z) - 72*CA*HSgg00*Power(z,2)*Log(z) - 6*CF*HSgg00*Power(z,2)*Log(z)))/2.) - Log(Power(mu,2)/qT2)*(-36*CA*HSgg00 - 18*HSgg10 + 6*CA*HSgg00*Power(Pi,2) + 80*HSgg00*nf*TF - 2*CA*HSgg00*z + 27*CF*HSgg00*z + 18*HSgg10*z - 18*CA*HSgg00*Power(Pi,2)*z - 80*HSgg00*nf*TF*z + 10*CA*HSgg00*Power(z,2) + 54*CF*HSgg00*Power(z,2) - 9*HSgg10*Power(z,2) + 9*HSgg11*Power(z,2) + 3*CA*HSgg00*Power(Pi,2)*Power(z,2) + 40*HSgg00*nf*TF*Power(z,2) - 124*CA*HSgg00*Power(z,3) - 36*CA*HSgg00*Power(z,2)*Log(Power(M,2)/Power(mu,2)) - 132*CA*HSgg00*Log(1 - z) + 108*CF*HSgg00*Log(1 - z) + 48*HSgg00*nf*TF*Log(1 - z) + 132*CA*HSgg00*z*Log(1 - z) - 108*CF*HSgg00*z*Log(1 - z) - 48*HSgg00*nf*TF*z*Log(1 - z) - 138*CA*HSgg00*Power(z,2)*Log(1 - z) + 54*CF*HSgg00*Power(z,2)*Log(1 - z) + 24*HSgg00*nf*TF*Power(z,2)*Log(1 - z) - 36*CA*HSgg00*Power(Log(1 - z),2) + 36*CF*HSgg00*Power(Log(1 - z),2) + 36*CA*HSgg00*z*Power(Log(1 - z),2) - 36*CF*HSgg00*z*Power(Log(1 - z),2) - 18*CA*HSgg00*Power(z,2)*Power(Log(1 - z),2) + 18*CF*HSgg00*Power(z,2)*Power(Log(1 - z),2) + 216*CA*HSgg00*z*Log(z) - 36*CF*HSgg00*z*Log(z) + 162*CA*HSgg00*Power(z,2)*Log(z) - 45*CF*HSgg00*Power(z,2)*Log(z) + 48*CA*HSgg00*Power(z,3)*Log(z) + 72*CA*HSgg00*Log(1 - z)*Log(z) - 72*CA*HSgg00*z*Log(1 - z)*Log(z) + 36*CA*HSgg00*Power(z,2)*Log(1 - z)*Log(z) - 36*CA*HSgg00*z*Power(Log(z),2) + 18*CF*HSgg00*z*Power(Log(z),2) - 18*CA*HSgg00*Power(z,2)*Power(Log(z),2) - 9*CF*HSgg00*Power(z,2)*Power(Log(z),2) - 72*CA*HSgg00*Log(z)*Log(1 + z) - 72*CA*HSgg00*z*Log(z)*Log(1 + z) - 36*CA*HSgg00*Power(z,2)*Log(z)*Log(1 + z) - 36*CA*HSgg00*(2 + 2*z + Power(z,2))*PolyLog(2,-z))) + 72*CA*HSgg00*(-22 + 24*z - 6*Power(z,2) + 4*Power(z,3) + 3*(6 - 2*z + 3*Power(z,2))*Log(z))*PolyLog(2,z) - 1296*CA*HSgg00*PolyLog(3,-z) - 1296*CA*HSgg00*z*PolyLog(3,-z) - 648*CA*HSgg00*Power(z,2)*PolyLog(3,-z) - 2160*CA*HSgg00*PolyLog(3,z) + 432*CA*HSgg00*z*PolyLog(3,z) - 1080*CA*HSgg00*Power(z,2)*PolyLog(3,z) - 864*CA*HSgg00*PolyLog(3,1/(1 + z)) - 864*CA*HSgg00*z*PolyLog(3,1/(1 + z)) - 432*CA*HSgg00*Power(z,2)*PolyLog(3,1/(1 + z)) + 1728*CA*HSgg00*Zeta(3) - 432*CA*HSgg00*z*Zeta(3) + 864*CA*HSgg00*Power(z,2)*Zeta(3)))/(54.*Power(z,2));
+
+}
+
+inline double c2gg2qg_virt_p(double z, double M, double theta, double mt, double mu, double qT2=0, double zp=0) {
+
+ return 0;
+
+}
+
+#endif /*__C2GG2QG_H__*/

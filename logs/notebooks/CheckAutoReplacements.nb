@@ -1,0 +1,275 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8420,        267]
+NotebookOptionsPosition[      7812,        241]
+NotebookOutlinePosition[      8152,        256]
+CellTagsIndexPosition[      8109,        253]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"Quit", "[", "]"}], ";"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.690885824486123*^9, 3.6908858291131783`*^9}, 
+   3.691481862811282*^9}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Check replacements of integrated star and delta distributions\
+\>", "Subsection",
+ CellChangeTimes->{{3.691230757122527*^9, 3.691230780873542*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", "\"\<Replacements.m\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.691230785587488*^9, 3.691230796195424*^9}}],
+
+Cell[TextData[{
+ "The results below correspond to integrating star distributions. According \
+to derivation in my notes:\n\n             ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Integral]", "0", Cell["qT2max"]], 
+     RowBox[{
+      SubsuperscriptBox[
+       RowBox[{"[", 
+        RowBox[{"f", "(", "qT2", ")"}], "]"}], "*", 
+       SuperscriptBox["\[Mu]", "2"]], 
+      RowBox[{"\[DifferentialD]", "qT2"}]}]}], "  ", "=", " ", 
+    RowBox[{"-", 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "qT2max", 
+       SuperscriptBox["\[Mu]", "2"]], 
+      RowBox[{
+       RowBox[{"f", "(", "qT2", ")"}], 
+       RowBox[{"\[DifferentialD]", "qT2", " "}]}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.691483813978209*^9, 3.691484104918693*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"checklist", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Join", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"delta", "[", "qT2", "]"}], "\[Rule]", " ", "1"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Thread", "[", 
+         RowBox[{
+          RowBox[{"star", "[", 
+           RowBox[{"LqT", "[", "#", "]"}], "]"}], "\[Rule]", 
+          RowBox[{"-", 
+           RowBox[{"Integrate", "[", 
+            RowBox[{
+             RowBox[{
+              FractionBox["1", "qT2"], 
+              SuperscriptBox[
+               RowBox[{"Log", "[", 
+                FractionBox["qT2", 
+                 SuperscriptBox["mu", "2"]], "]"}], "#"]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"qT2", ",", "qT2max", ",", 
+               SuperscriptBox["mu", "2"]}], "}"}], ",", 
+             RowBox[{"Assumptions", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"qT2max", "<", 
+                 SuperscriptBox["mu", "2"]}], ",", " ", 
+                RowBox[{"qT2max", ">", "0"}]}], "}"}]}]}], "]"}]}]}], "]"}], 
+        "&"}], "/@", 
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "3"}], "]"}]}]}], "]"}], "/.", 
+    RowBox[{"qT2max", "\[Rule]", " ", "qT2"}]}], "//", 
+   "StandardForm"}]}]], "Input",
+ CellChangeTimes->{{3.691219280292831*^9, 3.691219372673972*^9}, {
+   3.691219408996789*^9, 3.691219452989378*^9}, {3.691219642021109*^9, 
+   3.6912196450159483`*^9}, {3.691220156312461*^9, 3.691220167104838*^9}, {
+   3.691230928881096*^9, 3.691230930743372*^9}, {3.691483649134643*^9, 
+   3.691483651699234*^9}, 3.691483691787552*^9, {3.691483732400318*^9, 
+   3.6914837325959387`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"delta", "[", "qT2", "]"}], "\[Rule]", "1"}], ",", 
+   RowBox[{
+    RowBox[{"star", "[", 
+     RowBox[{"LqT", "[", "0", "]"}], "]"}], "\[Rule]", 
+    RowBox[{"-", 
+     RowBox[{"Log", "[", 
+      FractionBox[
+       SuperscriptBox["mu", "2"], "qT2"], "]"}]}]}], ",", 
+   RowBox[{
+    RowBox[{"star", "[", 
+     RowBox[{"LqT", "[", "1", "]"}], "]"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], " ", 
+     RowBox[{"Log", "[", 
+      FractionBox[
+       SuperscriptBox["mu", "2"], "qT2"], "]"}], " ", 
+     RowBox[{"Log", "[", 
+      FractionBox["qT2", 
+       SuperscriptBox["mu", "2"]], "]"}]}]}], ",", 
+   RowBox[{
+    RowBox[{"star", "[", 
+     RowBox[{"LqT", "[", "2", "]"}], "]"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox[
+        RowBox[{"Log", "[", 
+         FractionBox["1", 
+          SuperscriptBox["mu", "2"]], "]"}], "2"]}], " ", 
+      RowBox[{"Log", "[", 
+       FractionBox[
+        SuperscriptBox["mu", "2"], "qT2"], "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"Log", "[", 
+       FractionBox["1", 
+        SuperscriptBox["mu", "2"]], "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"Log", "[", 
+          SuperscriptBox["mu", "2"], "]"}], "2"], "-", 
+        SuperscriptBox[
+         RowBox[{"Log", "[", "qT2", "]"}], "2"]}], ")"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "3"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox[
+          RowBox[{"Log", "[", 
+           SuperscriptBox["mu", "2"], "]"}], "3"]}], "+", 
+        SuperscriptBox[
+         RowBox[{"Log", "[", "qT2", "]"}], "3"]}], ")"}]}]}]}], ",", 
+   RowBox[{
+    RowBox[{"star", "[", 
+     RowBox[{"LqT", "[", "3", "]"}], "]"}], "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox[
+         RowBox[{"Log", "[", 
+          SuperscriptBox["mu", "2"], "]"}], "4"]}], "-", 
+       RowBox[{"4", " ", 
+        SuperscriptBox[
+         RowBox[{"Log", "[", 
+          FractionBox["1", 
+           SuperscriptBox["mu", "2"]], "]"}], "3"], " ", 
+        RowBox[{"Log", "[", 
+         FractionBox[
+          SuperscriptBox["mu", "2"], "qT2"], "]"}]}], "+", 
+       SuperscriptBox[
+        RowBox[{"Log", "[", "qT2", "]"}], "4"], "-", 
+       RowBox[{"6", " ", 
+        SuperscriptBox[
+         RowBox[{"Log", "[", 
+          FractionBox["1", 
+           SuperscriptBox["mu", "2"]], "]"}], "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Log", "[", 
+            SuperscriptBox["mu", "2"], "]"}], "2"], "-", 
+          SuperscriptBox[
+           RowBox[{"Log", "[", "qT2", "]"}], "2"]}], ")"}]}], "-", 
+       RowBox[{"4", " ", 
+        RowBox[{"Log", "[", 
+         FractionBox["1", 
+          SuperscriptBox["mu", "2"]], "]"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Log", "[", 
+            SuperscriptBox["mu", "2"], "]"}], "3"], "-", 
+          SuperscriptBox[
+           RowBox[{"Log", "[", "qT2", "]"}], "3"]}], ")"}]}]}], ")"}]}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.691219420519896*^9, 3.691219429802162*^9}, 
+   3.691219466750721*^9, 3.691219656836946*^9, 3.6912201791359177`*^9, 
+   3.691230946043228*^9, 3.691481883748949*^9, 3.691483627818535*^9, 
+   3.691483664772347*^9, 3.691483704542061*^9, 3.6914837450061073`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"checklist", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "-", "ReplIntegratedqT"}], "//", 
+  "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.6912309376315193`*^9, 3.691231005819235*^9}, {
+  3.691231094351391*^9, 3.691231112911648*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.691231113461156*^9, 3.691231168586903*^9}, 
+   3.6914818839553747`*^9, 3.691483628013102*^9, {3.691483687877334*^9, 
+   3.691483704718423*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1180, 1123},
+WindowMargins->{{92, Automatic}, {1, Automatic}},
+FrontEndVersion->"11.0 for Linux x86 (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 190, 5, 34, "Input"],
+Cell[CellGroupData[{
+Cell[773, 29, 157, 3, 45, "Subsection"],
+Cell[933, 34, 143, 2, 32, "Input"],
+Cell[1079, 38, 830, 23, 84, "Text"],
+Cell[CellGroupData[{
+Cell[1934, 65, 1704, 43, 141, "Input"],
+Cell[3641, 110, 3520, 106, 171, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7198, 221, 281, 7, 32, "Input"],
+Cell[7482, 230, 302, 7, 31, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

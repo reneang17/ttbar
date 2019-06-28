@@ -1,0 +1,107 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,left=0.99in, right=0.99in,top=1.2in, bottom=1.2in]{geometry}
+
+\usepackage{common-defs}
+%\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{bm,braket}
+\usepackage{hyperref}
+
+\numberwithin{equation}{section}
+
+\newcommand{\question}[1]{{\bf Question:} #1}
+\newcommand{\slashnbar}{\slashed{\bar n}}
+\newcommand{\mixed}{{M}}
+\newcommand{\mycite}[1]{{\footnote{\tt  #1}}}
+\newcommand{\Litwo}{{\text{Li}_2}}
+\newcommand{\Lithree}{{\text{Li}_3}}
+\newcommand{\bfS}{\bm{S}}
+\newcommand{\tbfS}{{\tilde \bfS}}
+\newcommand{\bfH}{\bm{H}}
+\newcommand{\bfw}{\bm{w}}
+\newcommand{\bfZ}{\bm{Z}}
+\newcommand{\bfgamma}{\bm{\gamma}}
+\newcommand{\bfGamma}{\bm{\Gamma}}
+\newcommand{\bfI}{\bm{1}}
+\newcommand{\idop}{{1\hspace{-4pt} 1}}
+\newcommand{\wii}[1]{{\bfw_{i\bar i}^{#1}}}
+\newcommand{\kp}{k_+}
+\newcommand{\km}{k_-}
+\newcommand{\lp}{l_+}
+\newcommand{\smallcomment}[1]{{\small \it (#1)}}
+\newcommand{\Lp}{L_\perp}
+\newcommand{\betaIJ}{\beta_{IJ}}
+\newcommand{\vIJ}{v_{IJ}}
+\newcommand{\sIJ}{s_{IJ}}
+
+
+\allowdisplaybreaks
+
+\title{\tt topqT++}
+\author{
+  Sebastian Sapeta \\ \\
+  {\it Institute of Nuclear Physics, Polish Academy of Sciences}, \\ 
+  {\it ul. Radzikowskiego 152, 31-342 Krak\'ow, Poland}
+}
+
+%-----------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+%\tableofcontents
+
+\begin{abstract}
+  Theoretical basis and practical aspects of the program.
+\end{abstract}
+
+
+%-----------------------------------------------------------------------------
+\section{HS functions}
+
+The soft and the hard functions enter the cross section through the trace of
+their product
+%
+\begin{equation}
+  \text{Tr} \left[\mathbold{H}_{\iibar}(M, m_t, \cos\theta, \mu) 
+                  \mathbold{S}_{\iibar}(M, m_t, \cos\theta, \LT, \mu)\right] = 
+  \frac{3\as^2}{8 d_i} \sum_{n=0}^\infty  \sum^{n}_{m=0}
+  \left(\asp\right)^n \LT^m\,
+  \text{HS}^{(n,m)}_\iibar\,.
+  %\label{eq:}
+\end{equation}
+%
+The only source of $\LT$ is the soft function.  And the N$^n$LO correction to
+the soft function contains the range of powers $[L_\perp^0,\ldots, L_\perp^n]$.
+%
+Hence, we have the following contributions
+%
+\begin{align}
+  \text{HS}^{(0,0)} & 
+  \quad \leftarrow  \quad \mathbold{H}^{(0)} \mathbold{S}^{(0,0)}\,, \\
+  \text{HS}^{(1,1)} & 
+  \quad \leftarrow  \quad \mathbold{H}^{(0)} \mathbold{S}^{(1,1)}\,, \\
+  \text{HS}^{(1,0)} & 
+  \quad \leftarrow  \quad \mathbold{H}^{(0)} \mathbold{S}^{(1,0)},\ 
+	                  \mathbold{H}^{(1)} \mathbold{S}^{(0,0)}\,, \\
+  \text{HS}^{(2,2)} & 
+  \quad \leftarrow  \quad \mathbold{H}^{(0)} \mathbold{S}^{(2,2)}\,, \\
+  \text{HS}^{(2,1)} & 
+  \quad \leftarrow  \quad \mathbold{H}^{(0)} \mathbold{S}^{(2,1)},\ 
+	                  \mathbold{H}^{(1)} \mathbold{S}^{(1,1)}\,, \\
+  \text{HS}^{(2,0)} & 
+  \quad \leftarrow  \quad \mathbold{H}^{(0)} \mathbold{S}^{(2,0)},\ 
+	                  \mathbold{H}^{(1)} \mathbold{S}^{(1,0)},\
+	                  \mathbold{H}^{(2)} \mathbold{S}^{(0,0)}\,.
+\end{align}
+
+There is a  corresponding function for each 
+$\mathbold{H}^{(n)}$ and each $\mathbold{S}^{(n,m)}$ in the program. The
+corresponding matrices are calculated numerically for a given set of agruments
+and then they are multiplied and traced. This is much more efficient than
+matrix multiplication of expressions.
+
+%-----------------------------------------------------------------------------
+\bibliographystyle{unsrt}
+\bibliography{precision-qcd}
+
+\end{document}

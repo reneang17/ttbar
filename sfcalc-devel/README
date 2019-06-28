@@ -1,0 +1,5 @@
+Optimization:
+
+
+  * compiler plays a role
+  * -O9 (both for libint and sfcalc) speeds the program up 

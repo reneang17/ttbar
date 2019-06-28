@@ -1,0 +1,35 @@
+#-----------------------------------------------------------------------------
+# POWHEG runs from this directory which obtained with the following version of
+# the program:
+
+  URL: svn://powhegbox.mib.infn.it/trunk/POWHEG-BOX-NoUserProcesses
+  Revision: 3180
+
+#-----------------------------------------------------------------------------
+# Installation of POWHEG
+
+  ./installPOWHEG.py ~/heptools
+
+#-----------------------------------------------------------------------------
+# Generation of input and batch files
+
+  ./generate-batch-files.py template-inputttjNLOddbar-powheg.input 10
+
+#-----------------------------------------------------------------------------
+# Keywords
+
+ runningscale  : if < 0 then mur = muf = mt
+
+ bornktmin     : generation cut; should be significantly lower than jet analysis
+                 cut ptmin_jet
+
+#-----------------------------------------------------------------------------
+# Preparation of combined histogram file
+
+  ls ttjNLOddbar-20seed*-NLO.top | ./process-results.py
+
+
+#-----------------------------------------------------------------------------
+# old
+##  for i in `ls ttjNLOddbarseed*-NLO.top `; do ./transform-top-files.py $i; done
+##  paste ttjNLOddbarseed*res | combine-runs-errors.py  > ptPWGNLO.dat

@@ -1,0 +1,7 @@
+#ifndef `keepsymbolx'
+id  X = 1 ;
+  argument;
+    id x = 0 ;
+    id X = 1 ;
+  endargument;
+#endif

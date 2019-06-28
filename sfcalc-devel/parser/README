@@ -1,0 +1,17 @@
+--------------------------------------------------------------------------------
+  input.dat
+--------------------------------------------------------------------------------
+[dirs+]             - directories to be processed 
+
+[withredundant]     - generate files for the reundant integrals (i.e. the ones
+		      which do not takie into account symmetires of 2-cut
+                      graphs; with 0, 54 files are generated, without, 83
+
+[combine]           - combine functions from different sectors into a single
+		      function; 1, speeds up compilation and reduces the number
+                      of integrals, 0, allows one to compute individual graphs 
+                      later on, which is useful to resolve the problem of infs
+
+[poles]            -  decide which poles to compute, all, means all
+
+[precision]        -  either 64 (double precision) or 128 (quadruple precision)

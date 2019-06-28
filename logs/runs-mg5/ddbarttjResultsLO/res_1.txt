@@ -1,0 +1,21 @@
+
+
+Cross section per integration channel:
+         P0_ddx_ttxg                5   3.28799798e+00    9.5435e-03       0.2903%  
+         P0_ddx_ttxg                4   3.24681202e+00    9.2292e-03       0.2843%  
+         P0_ddx_ttxg                2   2.93405630e-01    7.0661e-04       0.2408%  
+         P0_ddx_ttxg                3   2.92991274e-01    7.0553e-04       0.2408%  
+         P0_ddx_ttxg                1   4.73608600e-03    8.2140e-06       0.1734%  
+
+
+ABS cross section per integration channel:
+         P0_ddx_ttxg                5   3.28799798e+00    9.5435e-03       0.2903%  
+         P0_ddx_ttxg                4   3.24681202e+00    9.2292e-03       0.2843%  
+         P0_ddx_ttxg                2   2.93405630e-01    7.0661e-04       0.2408%  
+         P0_ddx_ttxg                3   2.92991274e-01    7.0553e-04       0.2408%  
+         P0_ddx_ttxg                1   4.73608600e-03    8.2140e-06       0.1734%  
+
+Total ABS and 
+Total: 
+                      7.12594299e+00 +- 1.3314e-02  (1.8683e-01%)
+                      7.12594299e+00 +- 1.3314e-02  (1.8683e-01%) 

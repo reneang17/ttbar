@@ -1,0 +1,243 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6690,        233]
+NotebookOptionsPosition[      6059,        206]
+NotebookOutlinePosition[      6413,        222]
+CellTagsIndexPosition[      6370,        219]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"gij", "[", 
+     RowBox[{"qijV", ",", "ai", ",", "0", ",", "1", ",", "0", ",", "1"}], 
+     "]"}], "//.", "definitions"}], "/.", 
+   RowBox[{"{", 
+    RowBox[{"qijV", "\[Rule]", "1"}], "}"}]}], "//", "Simplify"}]], "Input",
+ CellChangeTimes->{{3.727545177404174*^9, 3.7275452147219477`*^9}, {
+  3.727545301135889*^9, 3.727545307997848*^9}, {3.7275453411392603`*^9, 
+  3.72754534716887*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gij", "[", 
+  RowBox[{"qijV", ",", "ai", ",", "0", ",", "1", ",", "0", ",", "1"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   SuperscriptBox["mi", "2"], " ", "\[Pi]", " ", "pjq", " ", 
+   RowBox[{"Log", "[", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["mi", "2"], " ", "pjq"}], 
+     RowBox[{"2", " ", "pipj", " ", "piq"}]], "]"}]}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "4"}], " ", "pipj", " ", "piq"}], "+", 
+   RowBox[{"2", " ", 
+    SuperscriptBox["mi", "2"], " ", "pjq"}]}]]], "Output",
+ CellChangeTimes->{
+  3.727544869611224*^9, {3.72754518829008*^9, 3.727545216354576*^9}, {
+   3.727545318093871*^9, 3.7275453476722116`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Coefficient", "[", 
+   RowBox[{
+    RowBox[{"Coefficient", "[", 
+     RowBox[{"g1ijTL", ",", "ep", ",", "0"}], "]"}], ",", "IPi", ",", "1"}], 
+   "]"}], "Pi"}]], "Input",
+ CellChangeTimes->{{3.727544891603011*^9, 3.7275449243297577`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{
+     FractionBox["1", 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "ai", "-", "aj"}], ")"}]}]], "\[Pi]", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"2", " ", 
+          RowBox[{"Log", "[", "v", "]"}]}], "v"]}], "+", 
+       FractionBox[
+        RowBox[{"2", " ", "ai", " ", 
+         RowBox[{"Log", "[", "v", "]"}]}], "v"], "+", 
+       FractionBox[
+        RowBox[{"2", " ", "aj", " ", 
+         RowBox[{"Log", "[", "v", "]"}]}], "v"], "+", 
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        RowBox[{"Log", "[", 
+         FractionBox["ai", "vp"], "]"}]}], "-", 
+       FractionBox[
+        RowBox[{"Log", "[", 
+         FractionBox["ai", "vp"], "]"}], 
+        RowBox[{"2", " ", "v"}]], "+", 
+       FractionBox[
+        RowBox[{"ai", " ", 
+         RowBox[{"Log", "[", 
+          FractionBox["ai", "vp"], "]"}]}], "v"], "+", 
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        RowBox[{"Log", "[", 
+         FractionBox["aj", "vp"], "]"}]}], "-", 
+       FractionBox[
+        RowBox[{"Log", "[", 
+         FractionBox["aj", "vp"], "]"}], 
+        RowBox[{"2", " ", "v"}]], "+", 
+       FractionBox[
+        RowBox[{"aj", " ", 
+         RowBox[{"Log", "[", 
+          FractionBox["aj", "vp"], "]"}]}], "v"], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"Log", "[", "vp", "]"}]}], "-", 
+       RowBox[{"2", " ", "ai", " ", 
+        RowBox[{"Log", "[", "vp", "]"}]}], "-", 
+       RowBox[{"2", " ", "aj", " ", 
+        RowBox[{"Log", "[", "vp", "]"}]}], "+", 
+       FractionBox[
+        RowBox[{"Log", "[", "vp", "]"}], "v"], "-", 
+       FractionBox[
+        RowBox[{"ai", " ", 
+         RowBox[{"Log", "[", "vp", "]"}]}], "v"], "-", 
+       FractionBox[
+        RowBox[{"aj", " ", 
+         RowBox[{"Log", "[", "vp", "]"}]}], "v"]}], ")"}]}]}], "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Log", "[", 
+      RowBox[{"aj", "/", "vp"}], "]"}], "->", "0"}], "}"}]}], "/.", 
+  "VarsCase1"}]], "Input",
+ CellChangeTimes->{{3.727544952815208*^9, 3.7275449560563602`*^9}, {
+  3.727545039677499*^9, 3.727545054418067*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{"ai", " ", "\[Pi]", " ", 
+    RowBox[{"Log", "[", "ai", "]"}]}], 
+   RowBox[{"2", " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", "ai"}], ")"}]}]]}]], "Output",
+ CellChangeTimes->{
+  3.727544957345833*^9, {3.727545044290882*^9, 3.7275450553422003`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"ai", ",", "aj", ",", "v", ",", "vp", ",", "x"}], "}"}], "//.", 
+  "definitions"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["mi", "2"], " ", "pjq"}], 
+    RowBox[{"2", " ", "pipj", " ", "piq"}]], ",", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["mj", "2"], " ", "piq"}], 
+    RowBox[{"2", " ", "pipj", " ", "pjq"}]], ",", 
+   SqrtBox[
+    RowBox[{"1", "-", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["mi", "2"], " ", 
+       SuperscriptBox["mj", "2"]}], 
+      SuperscriptBox["pipj", "2"]]}]], ",", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SqrtBox[
+       RowBox[{"1", "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["mi", "2"], " ", 
+          SuperscriptBox["mj", "2"]}], 
+         SuperscriptBox["pipj", "2"]]}]]}], ")"}]}], ",", 
+   FractionBox[
+    RowBox[{"1", "-", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["mi", "2"], " ", 
+         SuperscriptBox["mj", "2"]}], 
+        SuperscriptBox["pipj", "2"]]}]]}], 
+    RowBox[{"1", "+", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["mi", "2"], " ", 
+         SuperscriptBox["mj", "2"]}], 
+        SuperscriptBox["pipj", "2"]]}]]}]]}], "}"}]], "Output",
+ CellChangeTimes->{3.727545122292148*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{177, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 450, 11, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1033, 35, 126, 3, 32, "Input"],
+Cell[1162, 40, 562, 16, 66, "Output"]
+}, Open  ]],
+Cell[1739, 59, 273, 7, 32, "Input"],
+Cell[CellGroupData[{
+Cell[2037, 70, 2194, 65, 218, InheritFromParent],
+Cell[4234, 137, 307, 9, 51, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4578, 151, 144, 4, 32, "Input"],
+Cell[4725, 157, 1318, 46, 101, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

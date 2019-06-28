@@ -1,0 +1,13 @@
+b SS, DS;
+.sort
+Keep Brackets;
+
+#do i=1,1
+  id once SS(K?)*DS(K?,X,n?) = DS(K,X,n-1)+X^2*DS(K,X,n);
+  if (match(SS(K?)*DS(K?,X,n?))) redefine i "0";
+  b SS, DS;
+  .sort
+  Keep Brackets;
+#enddo
+
+.sort

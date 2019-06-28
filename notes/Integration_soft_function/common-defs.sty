@@ -1,0 +1,121 @@
+\ProvidesPackage{common-defs}
+% colour code:
+%   blue: emphasize
+%   red: warning
+%   green: eureka 
+
+%---------------------------------------------------------------- PACKAGES -----
+\usepackage{slashed}
+\usepackage{url}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{xspace}   % decides whether to insert a space or not
+\usepackage{fixmath}
+
+%------------------------------------------------------------- DEFINITIONS -----
+\newcommand{\jets}{\text{jets}}
+\newcommand{\const}{\text{const}}
+\newcommand{\cut}{\text{cut}}
+\newcommand{\jet}{\text{jet}}
+\newcommand{\tree}{\text{tree}}
+\newcommand{\im}{\text{Im}}
+\newcommand{\msbar}{\ensuremath{\overline{\text{MS}}}\xspace}
+\newcommand{\comment}[1]{{\color{red}\textbf{[#1]}}}
+\newcommand{\softcomment}[1]{{\small (#1)}}
+\newcommand{\as}{{\alpha_s}}
+\newcommand{\asp}{\frac{\as}{4\pi}}
+\newcommand{\aEW}{\alpha_\text{\sc ew}}
+\newcommand{\calL}{{\cal L}}
+\newcommand{\calM}{{\cal M}}
+\newcommand{\calA}{{\cal A}}
+\newcommand{\calB}{{\cal B}}
+\newcommand{\calS}{{\cal S}}
+\newcommand{\calH}{{\cal H}}
+\newcommand{\calR}{{\cal R}}
+\newcommand{\calO}{{\cal O}}
+\newcommand{\calP}{{\cal P}}
+\newcommand{\calU}{{\cal U}}
+\newcommand{\calC}{{\cal C}}
+\newcommand{\calW}{{\cal W}}
+\newcommand{\calI}{{\cal I}}
+\newcommand{\qcd}{\text{QCD}}
+\newcommand{\lead}{\text{lead}}
+\newcommand{\lqcd}{\Lambda_\text{QCD}}
+\newcommand{\vbar}{{\bar v}}
+\newcommand{\qbar}{{\bar q}}
+\newcommand{\ubar}{{\bar u}}
+\newcommand{\dbar}{{\bar d}}
+\newcommand{\sbar}{{\bar s}}
+\newcommand{\cbar}{{\bar c}}
+\newcommand{\bbar}{{\bar b}}
+\newcommand{\ybar}{{\bar y}}
+\newcommand{\iibar}{{i \bar i}}
+\newcommand{\ttbar}{\ensuremath{t \bar t}\xspace}
+\newcommand{\qqbar}{{$q \bar q$ }}
+\newcommand{\slashD}{\slashed{D}}
+\newcommand{\slashA}{\slashed{A}}
+\newcommand{\slashp}{\slashed{p}}
+\newcommand{\slashk}{\slashed{k}}
+\newcommand{\slashn}{\slashed{n}}
+\newcommand{\slashpartial}{\slashed{\partial}}
+\newcommand{\tr}{\text{Tr}}
+\newcommand{\Se}{S_\epsilon}
+\newcommand{\order}[1]{{{\cal O}\left(#1\right)}}
+\newcommand{\spp}[1]{{\langle #1\rangle}}
+\newcommand{\spm}[1]{{\langle #1\rangle}}
+\newcommand{\MeV}{\text{MeV}}
+\newcommand{\GeV}{\text{GeV}}
+\newcommand{\eV}{\text{eV}}
+\newcommand{\tot}{\text{tot}}
+\newcommand{\ie}{{\it i.e. }}
+\newcommand{\etc}{{\it etc }}
+\newcommand{\eg}{{\it e.g. }}
+\newcommand{\cf}{{\it c.f.~}}
+\newcommand{\epem}{{e^+e^-}}
+\newcommand{\mupmum}{{\mu^+\mu^-}}
+\newcommand{\shat}{{\hat s}}
+\newcommand{\qq}{{qq}}
+\newcommand{\qg}{{qg}}
+\newcommand{\gq}{{gq}}
+\newcommand{\lplm}{{l^+l^-}}
+\newcommand{\DY}{\text{DY}}
+\newcommand{\aem}{\alpha_\text{em}}
+\newcommand{\aew}{\alpha_\text{EW}}
+\newcommand{\tauhat}{{\hat \tau}}
+\newcommand{\LO}{\text{LO}}
+\newcommand{\NLO}{\text{NLO}}
+\newcommand{\NNLO}{\text{NNLO}}
+\newcommand{\nbar}{\ensuremath{\bar{n}}}
+\newcommand{\nLO}{\nbar \text{LO}\xspace}
+\newcommand{\nNLO}{\nbar \text{NLO}\xspace}
+\newcommand{\nnNLO}{\nbar\nbar \text{NLO}\xspace}
+\newcommand{\nnLO}{\nbar\nbar \text{LO}\xspace}
+\newcommand{\nNNLO}{\nbar \text{NNLO\xspace}}
+\newcommand{\sigmahat}{{\hat \sigma}}
+\newcommand{\myref}[1]{{\mygray \footnotesize [#1]}\xspace}
+\newcommand{\myitem}{{$\myblue \scriptstyle \blacktriangleright\ $}}
+\newcommand{\TeV}{\text{TeV}\xspace}
+\newcommand{\bit}{\begin{itemize}}
+\newcommand{\eit}{\end{itemize}}
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\LS}{\mathrm{LS}}
+\newcommand{\ptveto}{p_{t,\text{veto}}}
+\newcommand{\pTveto}{p_T^{\text{veto}}}
+\newcommand{\sqrts}{\sqrt{s}}
+\newcommand{\PU}{\text{PU}}
+\newcommand{\Sbb}{\mathbb{S}}
+\newcommand{\Hbb}{\mathbb{H}}
+\newcommand{\MC}{\text{MC}}
+\newcommand{\dy}{\Delta y}
+\newcommand{\bare}{\text{bare}}
+\newcommand{\todo}[1]{
+\begin{center}
+\textbf{\color{red} #1}
+\end{center}
+}
+\newcommand{\todoline}[1]{
+{{\color{red} [#1]}}
+}

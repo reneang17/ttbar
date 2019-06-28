@@ -1,0 +1,16 @@
+Utilitites for difference equation determination according to the
+Laporta algorithm. In order for them to work, one should:
+
+1) use prototypes,which have the last line with mass X, this mass
+   will be replaced by 1, and the symbolic power x will be assigned to
+   the line. if the output integral has power n on the last line, then
+   the real power is x+n.
+
+2) set the option IntegralMap::LaportaOrdering
+
+3) set the option PrototypeMap::SolveX, if one doesn't want the prototypes
+   without the X line to be solved. this is a useful speedup
+
+It is also better to first construct the system of identities with
+PrototypeMap::StoreIdentities, and only then solve for the crucial identities,
+since in practice one just needs a few integrals.

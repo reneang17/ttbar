@@ -1,0 +1,3 @@
+
+  * quark and gauge calculations (bulk-integrals-, soft-function-) could be
+    merged into a single file with common functions moved to a module

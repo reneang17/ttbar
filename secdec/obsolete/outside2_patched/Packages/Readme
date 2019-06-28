@@ -1,0 +1,12 @@
+
+
+This new set of packages  aims to clean the beta version of the evaluation 
+outside of the boundary. Here we resume the main changes:
+
+- The calculation of individual bubble graphs have quadratic divergences, associated to the limit in which the emissions are collinear.  In principle our beta code can deal with the quadratic divergences that appear with individual bubble graphs however we have not pushed validation agains analytics. 
+
+This new version is designed to be a lot  more redable and therefore we no longer deal with such case that complicates the substitution of Weights significantly, i.e. we will assume that the input has only log divergences. 
+   
+
+- A second improvement is that we aim to make use of parallel programing.
+

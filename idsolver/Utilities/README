@@ -1,0 +1,7 @@
+Compilation switches:
+
+CXXFLAGS=-DMATHLINK enables the mathematica interface
+
+CXXFLAGS=-DIO_DEBUG verbose IO for IPCPipe
+
+CXXFLAGS=-DDEBUG for vector access range checks

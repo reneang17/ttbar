@@ -1,0 +1,5 @@
+FourierTransform.m -> ../vp-terms/FourierTransform.m
+Functions.m -> ../vp-terms/Functions.m
+QCDFunctions.m -> ../logs/notebooks/QCDFunctions.m
+Replacements.m -> ../vp-terms/Replacements.m
+ResultsOthers.m -> ../vp-terms/ResultsOthers.m

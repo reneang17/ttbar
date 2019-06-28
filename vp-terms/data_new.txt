@@ -1,0 +1,54 @@
+@Parser:prefix	integral
+
+@Parser:path	./Bubble32/
+
+#number of files to compute, 0 - all of files
+@Parser:integrals_files		0   @	
+# 2 - all of parts, else  0,0   ,   0,1    , 1,0    1,1
+@Parser:ap_ep			2   @	
+
+integrands	1      #integrands to compute, 0 - all of the integrands
+@program:ap_ep  0 0 @  #number of ap ep to calculate by program, 2 - all 
+@beta		0.9
+@Theta		0.785398
+
+@method		Vegas			#to jest komentarz
+@NDIM		5
+@NCOMP		1
+@EPSREL		1e-12
+@EPSABS		1e-1
+@MINEVAL	0
+@MAXEVAL	50000000
+@NVEC		1
+@verbose	1
+
+@Vegas
+@SEED		0
+@NSTART		1000
+@NINCREASE	500
+@NBATCH		1000
+@GRIDNO		0
+
+@Suave
+@LAST		4
+@SEED		0
+@NNEW		1000
+@FLATNESS	25.
+@NMIN		2
+
+@Divonne
+@SEED		0
+@KEY1		47
+@KEY2		1
+@KEY3		1
+@MAXPASS	5
+@BORDER		0.
+@MAXCHISQ	10.
+@MINDEVIATION	.25
+@NGIVEN		0
+@LDXGIVEN	3
+@NEXTRA		0
+
+@Cuhre
+@LAST		4
+@KEY		0

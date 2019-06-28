@@ -1,0 +1,66 @@
+******************************************************************************************
+  Sebastian's notes
+******************************************************************************************
+
+  Files: TopHSqq.f90 and TopHSgg.f90
+  Arrays: complex(8) :: Hqq1_coeff(0:2,2,2), Hqq2_coeff(1:4,2,2)
+          complex(8) :: Hgg1_coeff(0:2,3,3), Hgg2_coeff(1:4,3,3)
+
+  1 and 2 in the name denote to the order of the hard function. The last two
+  indices correspond to colour space, hence 2 in qq and 3 in gg. The first index
+  corresponds to the power of Log[hscale^2/mt^2] according to: 
+  Hqq1 = Lmu2m2**2 * Hqq1_coeff(2,:,:) + Lmu2m2 * Hqq1_coeff(1,:,:) + Hqq1_coeff(0,:,:)
+
+  Files: TopHSqq.f90 IntVar.f90
+  Arrays: real(8) :: Sqq1(0:2,2,2), Sqq2(1:4,2,2) 
+
+  1 and 2 denote the order of the soft function. The last two indices correspond
+  to colours space. The first index seems to match that of the hard functions but
+  in practices, all soft functions with different values of the first index are
+  indentical.
+
+******************************************************************************************
+  Top quark pair production in approximated NNLO QCD
+  
+  Based on the following papers:
+    Valentin Ahrens, Andrea Ferroglia, Matthias Neubert, Ben D. Pecjak, Li Lin Yang
+    arXiv:0912.3375, arXiv:1003.5827, arXiv:1103.0550 and arXiv:1106.xxxx
+******************************************************************************************
+
+The program needs several external libraries:
+
+ LHAPDF(libLHAPDF.a): http://projects.hepforge.org/lhapdf/
+ Cuba(libcuba.a): http://www.feynarts.de/cuba/
+
+If these libraries are installed in a non-standard location, it can be specified in the
+first line of "makefile". (Note: The program is by default assumed to be linked with Cuba
+version 2.x. To use Cuba version 1.x, change Cuba_VERSION to 1 in the second line of
+"makefile".)
+
+
+Also note that the program relies on the script "lhapdf-config" in LHAPDF to determine the
+directory containing the PDF sets. Make sure that "lhapdf-config" is in the PATH and the
+PDF sets are put in the directory returned by executing "lhapdf-config --pdfsets-path".
+
+
+The program is tested under Scientific Linux 5.4 with gfortran 4.1.2 and under Mac OS X
+10.6 with gfortran 4.2.3.
+
+
+To use the program, type "make" to compile it, and run the driver script
+
+  ./RunTop.py sqrtS scheme mt [pdfset]
+
+where
+
+      sqrtS: center-of-mass energy of the collider (1960 for Tevatron, others for LHC)
+     scheme: 0 for pole scheme, 1 for MSbar scheme, 2 for 1S scheme
+         mt: the top quark mass in the specified scheme
+   [pdfset]: MSTW for MSTW2008NNLO (default), NNPDF for NNPDF2.1, CTEQ for
+             CTEQ6.6, CT10 for CT10
+
+The program will print out the cross section with perturbative uncertainties and
+PDF+alphas uncertainties.
+
+There is another driver script RunTop2.py with more functionalities. Run it without
+parameters to see the usage.

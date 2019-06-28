@@ -1,0 +1,3 @@
+(* ::Package:: *)
+
+-(1/4) CA HSgg10 DiracDelta[-1+z]+1/8 HSgg22 DiracDelta[-1+z]+HSgg11 (-(1/2) CA logsmt DiracDelta[-1+z]+CA (2-1/z-z+z^2-plus[1/(1-z)]))+HSgg00 ((CA^2 logsmt^2+logsmt (-((11 CA^2)/12)+(CA nf)/6)+(CA^2 \[Pi]^2)/12-\[CapitalGamma]1A/16) DiracDelta[-1+z]+CA^2 (-16+8/z+8 z-8 z^2) Log[1-z]+CA^2 (-(4/z)-12 z+4 z^2) Log[z]+CF (nf/2+(2 nf)/(3 z)-(nf z)/2-(2 nf z^2)/3+(nf+nf z) Log[z])+CA^2 logsmt (-8+4/z+4 z-4 z^2+4 plus[1/(1-z)])+CA (-((2 nf)/3)+nf/(3 z)+(nf z)/3-(nf z^2)/3+1/3 nf plus[1/(1-z)])+CA^2 (47/3-33/(2 z)-(83 z)/6+(33 z^2)/2-11/6 plus[1/(1-z)]+4 plus[Log[(1-z)^2/z]/(1-z)]))

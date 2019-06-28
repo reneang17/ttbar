@@ -1,0 +1,46 @@
+Installation
+------------
+
+- Install Form
+
+- Install Fermat. Make sure that it can be called globaly in the system as
+  'ferl'.
+
+- Install qdbm-1.8.77 (there, go also into plus directory and install the
+  content to the same qdbm-1.8.77 destination) 
+
+- Compile DiaGen  Utilities IdSolver  IdSolver/Tools
+
+- Add paths to .bashrc
+
+    PATH=$PATH:$HOME/heptools/fermat
+    
+    PATH=$PATH:/heptools/qdbm-1.8.77/bin
+    export CPLUS_INCLUDE_PATH=$HOME/heptools/qdbm-1.8.77/include
+    export LIBRARY_PATH=$HOME/heptools/qdbm-1.8.77/lib
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/heptools/qdbm-1.8.77/lib
+    export PATH=$PATH:$HOME/work/ttbar/scripts
+    export PATH=$PATH:$HOME/work/ttbar/idsolver/IdSolver/Tools
+
+
+Possible issues:
+----------------
+
+ - If generate_identities does not progress it may be because ferl is not
+   accesile through PATH.
+
+ - It all works with 32-bit version of fermat 3.9.9999. Version 6.17 in
+   conjuction with IdSolver produces an error. There must be some compatibility
+   issues that could be solved in principle in the future.
+
+ - 32-bit ferl cannot be used on 64-bit system unless gcc-multilib is installed.
+
+ - If the test program
+
+      $../IdSolver/Tools/solve_prototypes proto 1 1 ep
+
+    gets stuck at "Creating administrative and identity files...", it means that
+    ferl cannot be loaded so check the PATH.
+
+ - If generate_identities does not progress, it may be because of ferl, which
+   does not work due to missing glibc.i686 (on SLC6).

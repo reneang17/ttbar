@@ -1,0 +1,4 @@
+Topology.cpp
+
+there is a bug in assign_momentum() that occurs, when a component has just
+one single edge. in this case n_assigned_momenta is set to 2 instead of 1.

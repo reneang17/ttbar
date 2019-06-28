@@ -1,0 +1,17 @@
+rm -f FlavRegList
+rm -f inputttj*-btlgrid.top
+rm -f inputttj*-counters.dat
+rm -f inputttj*-grid.dat
+rm -f inputttj*-stat.dat
+rm -f inputttj*-ubound.dat
+rm -f inputttj*-xgrid.dat
+rm -f input*.lhe
+rm -f pwghistnorms.top
+rm -rf pwhg_checklimits
+rm -f *seed*top
+rm -f *seed*res
+rm -rf LSFJOB*
+rm -rf batch*
+rm -f *seed*.input
+rm -rf ttj*seed*
+rm -rf core.*

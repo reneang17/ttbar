@@ -1,0 +1,1 @@
+-a[3]/beta + a[3]*Y[3]*Ym[1]/(2*beta) + a[3]*Y[3]*Ym[2]/(2*beta) -a[4]/beta + a[4]*Y[4]*Ym[1]/(2*beta) + a[4]*Y[4]*Ym[2]/(2*beta)

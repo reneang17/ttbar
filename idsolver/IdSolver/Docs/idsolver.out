@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{General guidelines}{}% 1
+\BOOKMARK [1][-]{section.2}{Tools directory}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{generate\137identities}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{solve\137integrals}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{read\137identities}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{print\137identities}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{test directory}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{determine\137masters}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Input files}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Output files}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{The code}{}% 11

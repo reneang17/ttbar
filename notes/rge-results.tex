@@ -1,0 +1,195 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[a4paper,left=0.99in, right=0.99in,top=1.2in, bottom=1.2in]{geometry}
+
+\usepackage{common-defs}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,bm,braket,psfrag,colortbl,booktabs,latexsym}
+\numberwithin{equation}{section}
+\newcommand{\Tr}{\mathrm{Tr}}
+
+\title{RGE notes}
+\author{Sebastian Sapeta}
+
+%-----------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\abstract{
+In this note, we collect all the relevant results related to IR limit of QCD and
+obtained from analyses of the renormalization group equations.
+}
+
+\noindent \rule{\textwidth}{1pt}
+\tableofcontents
+\noindent \rule{\textwidth}{1pt}
+
+
+%-----------------------------------------------------------------------------
+\section{Anomalous dimensions}
+
+A useful collection of results for various types of anomalous dimensions can be
+found in Appendix A of Ref.~\cite{Ahrens:2010zv}.
+%
+We first define expansion coefficients of the anomalous dimensions and QCD
+$\beta$-function as
+\begin{align}
+  \label{eq:gammaexp}
+  \Gamma_{\text{cusp}}^i(\alpha_s) &= 
+  \Gamma_0^i \, \frac{\alpha_s}{4\pi} + 
+  \Gamma_1^i \left( \frac{\alpha_s}{4\pi} \right)^2 + 
+  \Gamma_2^i \left( \frac{\alpha_s}{4\pi} \right)^3 +
+  \ldots \, , \nonumber
+  \\
+  \beta(\alpha_s) &= -2\alpha_s \left[ \beta_0 \, \frac{\alpha_s}{4\pi} + \beta_1 \left(
+      \frac{\alpha_s}{4\pi} \right)^2 + \beta_2 \left( \frac{\alpha_s}{4\pi} \right)^3 +
+    \ldots \right] ,
+\end{align}
+and similarly for the other anomalous dimensions.
+%
+Recall that 
+%
+\begin{equation}
+  \Gamma_{\rm cusp}^i  =  C_i\, \gamma_{\rm cusp}
+  \qquad
+  \text{ where }
+  \qquad
+  C_i =  \left\{
+  \begin{array}{cc}
+    C_F \quad \text{for the $q\bar q$ channel}\,, \\
+    C_A \quad \text{for the $gg$ channel}\,,
+  \end{array}
+  \right.
+  %\label{eq:}
+\end{equation}
+% 
+and the cusp anomalous dimension to three-loop order is
+\cite{Moch:2004pa}
+%
+\begin{align}
+  \gamma^{\text{cusp}}_0 &= 4 \, ,
+  \nonumber
+  \\
+  \gamma^{\text{cusp}}_1 &= \left( \frac{268}{9} - \frac{4\pi^2}{3} \right) C_A -
+  \frac{80}{9} T_F n_f \, ,
+  \nonumber
+  \\
+  \gamma^{\text{cusp}}_2 &= C_A^2 \left( \frac{490}{3} - \frac{536\pi^2}{27} +
+    \frac{44\pi^4}{45} + \frac{88}{3} \zeta_3 \right) + C_A T_F n_f \left( -
+    \frac{1672}{27} + \frac{160\pi^2}{27} - \frac{224}{3} \zeta_3 \right) \nonumber
+  \\
+  &\quad + C_F T_F n_f \left( - \frac{220}{3} + 64 \zeta_3 \right) - \frac{64}{27} T_F^2
+  n_f^2 \, .
+\end{align}
+
+Then, we have single-particle, masless and massive anomalous
+dimensions~\cite{Becher:2009qa, Becher:2009kw}
+%
+\begin{align}
+  \gamma^q_0 &= - 3 C_F \, ,
+  \nonumber
+  \\
+  \gamma^q_1 &= C_F^2 \left( -\frac{3}{2} + 2 \pi^2 - 24 \zeta_3 \right) + C_F C_A \left(
+    - \frac{961}{54} - \frac{11\pi^2}{6} + 26 \zeta_3 \right) 
+    + C_F T_F n_f \left( \frac{130}{27} + \frac{2\pi^2}{3} \right) ,
+  \nonumber
+  \\
+  \gamma^g_0 &= - \frac{11}{3} C_A + \frac{4}{3} T_F n_f \, ,
+  \nonumber
+  \\
+  \gamma^g_1 &= C_A^2 \left( - \frac{692}{27} + \frac{11\pi^2}{18} + 2 \zeta_3 \right) +
+  C_A T_F n_f \left( \frac{256}{27} - \frac{2\pi^2}{9} \right) + 4 C_F T_F n_f \, ,
+  \nonumber
+  \\
+  \gamma^Q_0 &= - 2 C_F \, ,
+  \nonumber
+  \\
+  \gamma^Q_1 &= C_F C_A \left( -\frac{98}{9} + \frac{2\pi^2}{3} - 4 \zeta_3 \right) +
+  \frac{40}{9} C_F T_F n_f \, ,
+\end{align}
+%
+as well as velocity-dependent anomalous dimensions~\cite{Becher:2009kw,
+Ferroglia:2009ep, Ferroglia:2009ii, Korchemsky:1987wg, Korchemsky:1991zp,
+Kidonakis:2009ev}
+%
+\begin{align}
+  \gamma^{\text{cusp}}_0(\beta) &= \gamma^{\text{cusp}}_0 \beta \coth \beta
+  \, ,
+  \nonumber
+  \\
+  \gamma^{\text{cusp}}_1(\beta) &= \gamma^{\text{cusp}}_1 \beta \coth \beta
+  + 8 C_A \Bigg\{ \frac{\pi^2}{6} + \zeta_3 + \beta^2 \nonumber
+  \\
+  &\quad + \coth^2\beta \bigg[ \Li_3(e^{-2\beta}) + \beta
+  \Li_2(e^{-2\beta}) - \zeta_3 + \frac{\pi^2}{6} \beta + \frac{\beta^3}{3}
+  \bigg]
+  \nonumber
+  \\
+  &\quad + \coth\beta \bigg[ \Li_2(e^{-2\beta}) - 2\beta
+  \ln(1-e^{-2\beta}) - \frac{\pi^2}{6} (1+\beta) - \beta^2 -
+  \frac{\beta^3}{3} \bigg] \Bigg\} \, , \nonumber
+  \\ 
+  g_0(\beta)&=0, \nonumber \\
+  g_1(\beta) &= \coth\beta \bigg[ \beta^2 + 2\beta
+  \ln(1-e^{-2\beta}) - \Li_2(e^{-2\beta}) + \frac{\pi^2}{6} \bigg] -
+  \beta^2 - \frac{\pi^2}{6} \, .
+\end{align}
+
+For the QCD $\beta$-function to three-loop order we have
+%
+\begin{align}
+  \beta_0 &= \frac{11}{3} C_A - \frac{4}{3} T_F n_f \, ,
+  \nonumber\\
+  \beta_1 &= \frac{34}{3} C_A^2 - \frac{20}{3} C_A T_F n_f - 4 C_F T_F n_f \, ,
+  \nonumber\\
+  \beta_2 &= \frac{2857}{54} C_A^3 + \left( 2 C_F^2 - \frac{205}{9} C_F C_A -
+    \frac{1415}{27} C_A^2 \right) T_F n_f + \left( \frac{44}{9} C_F + \frac{158}{27} C_A
+  \right) T_F^2 n_f^2 \, .
+\end{align}
+
+The anomalous dimensions of the PDFs are given by
+\begin{align}
+  \gamma^{\phi_q}_0 &= 3C_F \, ,
+  \nonumber\\
+  \gamma^{\phi_q}_1 &= C_F^2 \left( \frac{3}{2} - 2\pi^2 + 24\zeta_3 \right) + C_F C_A
+  \left( \frac{17}{6} + \frac{22\pi^2}{9} - 12\zeta_3 \right) - C_F T_F n_f \left(
+    \frac{2}{3} + \frac{8\pi^2}{9} \right) ,
+  \nonumber\\
+  \gamma^{\phi_g}_0 &= \frac{11}{3} C_A - \frac{4}{3} T_F n_f \, ,
+  \nonumber\\
+  \gamma^{\phi_g}_0 &= C_A^2 \left( \frac{32}{3} + 12\zeta_3 \right) - \frac{16}{3} C_A
+  T_F n_f - 4 C_F T_F n_f \,.
+\end{align}
+
+%-----------------------------------------------------------------------------
+\section{Beam functions matching coefficients}
+
+The anaomaly exponent up to two-loops reads
+%
+\begin{eqnarray}
+   F_{i\bar i}(L_\perp,a_s) &=& 
+   a_s\,\Gamma_0^i L_\perp +
+   a_s^2 \left[\Gamma_0^i\, \beta_0\,\frac{L_\perp^2}{2} + 
+               \Gamma_1^i\,L_\perp + d_2^i \right] \,,
+\end{eqnarray}
+%
+where
+%
+\begin{equation}
+  d_2^q = {\Gamma_0^q} \left[
+  \left( \frac{202}{27} - 7\zeta_3 \right) C_A - \frac{56}{27}\,T_F n_f
+  \right]\,.
+  %\label{eq:}
+\end{equation}
+
+%-----------------------------------------------------------------------------
+\section{Splitting functions}
+
+%-----------------------------------------------------------------------------
+\section{Plus convolutions}
+
+%-----------------------------------------------------------------------------
+\bibliographystyle{unsrt} % sorts in the order of apperance
+\bibliography{precision-qcd}
+
+\end{document}

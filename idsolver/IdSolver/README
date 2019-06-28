@@ -1,0 +1,86 @@
+Class switches:
+
+1) Coefficient::CAS : (default NULL pointer)
+ 
+  rational function arithmetic software if not set pure
+  rational number arithmetic with gmp (use -DGMP)
+
+2) PrototypMap::ibp_procedure (default "ibp")
+
+  name of the form procedure used to generate ibp identities. called from
+  ibp_generator.
+
+################################################################################
+
+Class options:
+
+1) IntegralMap
+
+  - SolveNumerators (default 1)
+
+    if set masters will have dots, otherwise irreducible numerators
+
+  - LaportaOrdering (default 0)
+
+    if set, masters are chosen to have dots on the last line
+
+2) IdentityGenerator
+
+  - Verbose (default 0)
+
+    if set generates statistics at every step
+
+  - StoreIdentities (default 0)
+
+    if set databases will be created, where an identity will be assigned
+    to every integral in such a way that recursive solution of the identities
+    leads to the solution of the given integral.
+
+  - Incomplete (default 0)
+
+    if set, identities will only contain the solved prototype, because all
+    the subprototypes will be discarded.
+
+3) PrototypeMap
+
+  - Verbose (default 0)
+
+    see IdentityGenerator::Verbose
+
+  - AsymmetricPoints (default 0)
+
+    if set generation points will be restricted by symmetries.
+
+  - CreateDatabases (default 0)
+
+    if set the results will be stored in a database and not
+    printed to a text file.
+
+  - StoreIdentities (default 0)
+
+    see IdentityGenerator::StoreIdentities
+
+  - SolveX (default 0)
+
+    solves only prototypes which have a line with a mass X. right now, the
+    only use is in the difference equation determination. see also
+    LaportaOrdering
+
+  - Postscript
+
+    if set, postscript pictures will be generated for all the prototypes
+
+################################################################################
+
+Compilation switches:
+
+CXXFLAGS=-DLARGE_DATABASES enables the Curia inteface in QDBM. The initial
+  maximal size of the databases is fixed by QDBM to 10GB, but the databases
+  resize automatically in steps of 10GB. Beware of the number of open files,
+  which is usually limited to 1024.
+
+CXXFLAGS=-DMATHLINK enables the mathematica interface (recompile Utilities)
+
+CXXFLAGS=-DGMP enables the gmp interface
+
+CXXFLAGS=-DDEBUG range checking in vectors (recompile DiaGen and Utilities)

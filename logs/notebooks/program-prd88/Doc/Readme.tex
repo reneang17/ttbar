@@ -1,0 +1,112 @@
+\documentclass[letterpaper,aps,prd,,nofootinbib]{revtex4}
+\usepackage{graphicx,amsmath,amssymb}
+
+\newcommand{\als}{\alpha_s}
+\newcommand{\ep}{\epsilon}
+\newcommand{\nn}{\nonumber}
+\newcommand{\lp}{L_{\perp}}
+
+\newcommand{\alert}{\bf \color{red}}
+
+\begin{document}
+
+
+\title{The fixed order coefficients}
+
+\author{Hai Tao Li, Chong Sheng Li, Ding Yu Shao,  Li Lin Yang, Hua Xing Zhu}
+
+
+
+\begin{abstract}
+     This note documents the use of the MATHEMATICA program.
+     In this program, we provide the   $\Sigma_{i\bar{i}\leftarrow ab}^{(i,j)}$
+     and the relevant functions.
+\end{abstract}
+\maketitle
+%\tableofcontents
+
+\section{The hard and soft functions}
+The complete analytic results for the hard and soft functions matrices are provided in this programs. 
+The perturbative expansions of the hard and soft functions are in paper.
+The functions
+{\bf{Hqq(i)}} and {\bf{Hgg(i)}} give the $\mathcal{O}(\alpha_s^{i})$  hard function
+for quark-antiquark annihilation and gluon gluon fusion channels, respectively, where
+$i=0,1$.
+The functions {\bf{softqq(i)}} and {\bf{softgg(i)}} give the $\mathcal{O}(\alpha_s^{i})$ soft
+functions and here $i=0,1,2$, where at NNLO level we only give the scale-dependent  soft function.
+And these fixed order hard and soft functions can be obtained by following the example in {\bf{example.nb}}.
+The traces of the product of hard functions and soft functions are written as
+\begin{align}
+       {\rm{Tr}}\left[
+       \bm{H}_{i\bar{i}}(M,m_t, \cos\theta, \mu)
+       \bm{S}_{i\bar{i}}(M,m_t,L_\perp, \cos\theta ,\mu)
+       \right]= \frac{8 \alpha_s^2}{3 d_i} \sum_{i=1}  \left(\frac{\alpha_s}{4\pi}\right)^n
+       {\rm{HS}}_{i\bar{i}}^{(n)}(M,m_t,L_\perp, \cos\theta ,\mu)\ ,
+\end{align}
+where
+\begin{align}
+       {\rm{HS}}^{(n)}_{i\bar{i}}(M,m_t,L_\perp, \cos\theta, \mu)=
+       \sum_{m=0}^{2n} {\rm{HS}}^{(n,m)}_{i\bar{i}} L_\perp^{m}\ .
+\end{align}
+In this program, we define
+\begin{align}
+       {\rm{HSgg21}} = {\rm{HS}}^{(2,1)}_{gg}, \qquad \rm{similar\ for\ others,}
+\end{align}
+which are used in the $\Sigma_{i\bar{i}\leftarrow ab}$ functions.
+
+\section{the $\Sigma_{i\bar{i}\leftarrow ab}$ Coefficients}
+
+The partonic cross section at NNLO can be written as
+\begin{equation}
+  C_{i\bar{i}\leftarrow ab}(z_1,z_2,q_T,M,\cos\theta,m_t,\mu)=\sum_{n=0}
+        \left(\frac{\alpha_s}{4\pi}\right)^n C^{(n)}_{i\bar{i}\leftarrow ab}(z_1,z_2,q_T,M,\cos\theta,m_t,\mu)
+\end{equation}
+
+The definition of $\Sigma_{i\bar{i}\leftarrow ab}$ have been defined in our paper. The NLO and NNLO results can be expressed as
+ \begin{multline}
+ \label{eq:nlo_qt}
+          \int \frac{dz_1}{z_1} \frac{dz_2}{z_2} \delta(z-z_1 z_2)
+          C^{(1)}_{i\bar{i}\leftarrow ab}(z_1,z_2,q_T,M,\cos\theta,m_t,\mu)=
+          \\
+          \Sigma^{(1,0)}_{i\bar{i}\leftarrow ab}
+          \delta(q_T^2)
+          +
+          \Sigma^{(1,1)}_{i\bar{i}\leftarrow ab}
+          \left[ \frac{1}{q_T^2}\right]_*^{[\mu^2]} +
+          \Sigma^{(1,2)}_{i\bar{i}\leftarrow ab}
+          \left[\frac{1}{q_T^2} \ln\frac{q_T^2}{\mu^2}\right]_*^{[\mu^2]}\ ,
+ \end{multline}
+ \begin{multline}
+ \label{eq:nnlo_qt}
+          \int \frac{dz_1}{z_1} \frac{dz_2}{z_2} \delta(z-z_1 z_2)
+          C^{(2)}_{i\bar{i}\leftarrow ab}(z_1,z_2,q_T,M,\cos\theta,m_t,\mu) =
+          (\Sigma^{(2,0)}_{i\bar{i}\leftarrow ab}-4 \zeta_3 \Sigma^{(2,3)}_{i\bar{i}\leftarrow ab})
+          \delta(q_T^2)
+         \\
+          +
+          (\Sigma^{(2,1)}_{i\bar{i}\leftarrow ab}+ 16 \zeta_3\Sigma^{(2,4)}_{i\bar{i}\leftarrow ab})
+           \left[\frac{1}{q_T^2}\right]_*^{[\mu^2]} +
+          \Sigma^{(2,2)}_{i\bar{i}\leftarrow ab}
+           \left[ \frac{1}{q_T^2} \ln\frac{q_T^2}{\mu^2}\right]_*^{[\mu^2]}+
+           \Sigma^{(2,3)}_{i\bar{i}\leftarrow ab}
+           \left[\frac{1}{q_T^2} \ln^2\frac{q_T^2}{\mu^2}\right]_*^{[\mu^2]}+
+            \Sigma^{(2,4)}_{i\bar{i}\leftarrow ab} \left[\frac{1}{q_T^2} \ln^3\frac{q_T^2}{\mu^2}\right]_*^{[\mu^2]}\ .
+ \end{multline}
+The function {\bf{Sigmaqqbar("ab",\ i,\ j)}} returns the coefficient $\Sigma_{q\bar{q}\leftarrow ab}^{(i,j)}$, where "ab" can be "qqbar", "qg", "gg" and "qqprime". And the function {\bf{Sigmagg("ab",\ i,\ j)}} returns the coefficient $\Sigma_{gg\leftarrow ab}^{(i,j)}$, where "ab" can be  "gg", "qg" and "qq".
+In the Coefficients,  the two-loop splitting functions $P^{(2)}_{i\leftarrow j}(z)$ in the $\Sigma_{gg\leftarrow ab}^{(i,j)}$ are labeled as {\bf{Pij2(z)}}. And the function {\bf {pgg2(z), pqg2(z), pqg2(z), pqqV(z), pqqbV(z), pqqS(z)}} returns the corresponding expressions of two loop splitting  functions.
+
+The kinematic variables used in this program are defined as
+\begin{align}
+      M^2&=(p_3+p_4)^2,
+       \qquad t_1=(p_1-p_3)^2-m_t^2,
+       \qquad u_1 = (p_1-p_4)^2-m_t^2, \nonumber \\
+       \beta_t&=\sqrt{1-4m_t^2/M^2}, \qquad x_s=(1-\beta_t)/(1+\beta_t), \qquad \beta_{34}=i\pi+\ln(x_s).
+\end{align}
+
+
+\begin{thebibliography}{199}
+
+\end{thebibliography}
+
+
+\end{document}

@@ -1,0 +1,30 @@
+Analytic results
+----------------
+
+The results are given in the "For cross check" sections of:
+
+  vp-terms/soft-function-quark-bubble.nb 
+
+  -2.66667
+  -4.13529
+  -9.055
+  -22.5484
+  
+  vp-terms/soft-function-quark-bubble.nb
+
+  3.33333
+  6.50245
+  10.9854
+  29.8628
+
+
+Numeric results
+---------------
+
+Run this simple command to generate numeric results with (amlost, because some
+jobs ended with fail=1) 10^-4 accuracy:
+
+  for j in f g; do for i in 11 10 01 00; do echo $j$i;  \
+  grep res rescol${j}bub13_${i}* | rowsum.py -c 2; done; done
+
+

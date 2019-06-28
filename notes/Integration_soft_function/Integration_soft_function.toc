@@ -1,0 +1,26 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}NLO graph contribution to S1bare in momentum space}{4}{section.2}
+\contentsline {section}{\numberline {3}Double cuts over the boundary}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Integration of on-shell and observable condition}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Relevant regions}{5}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Propagators of incoming partons}{5}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Eikonal propagators of $(t,\mathaccentV {bar}016{t})$}{5}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Divergences of exact propagators}{6}{subsubsection.3.2.3}
+\contentsline {section}{\numberline {4}Analytical integration on the boundary }{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Some comments about evaluations 5/12/16}{8}{subsection.4.1}
+\contentsline {section}{\numberline {5}Outside of the boundary}{10}{section.5}
+\contentsline {section}{\numberline {6}Azimuthal integration of $q_\perp $ in $d-3$ dims}{10}{section.6}
+\contentsline {section}{\numberline {7}Double cuts for general kinematics}{10}{section.7}
+\contentsline {subsection}{\numberline {7.1}Details on azimuth averaging}{12}{subsection.7.1}
+\contentsline {section}{\numberline {8}N approach}{13}{section.8}
+\contentsline {section}{\numberline {9}Weight and Infrared part}{14}{section.9}
+\contentsline {section}{\numberline {10}Power counting (for the infrared part)}{14}{section.10}
+\contentsline {section}{\numberline {11}Soft gluon double cuts}{16}{section.11}
+\contentsline {subsection}{\numberline {11.1}Amplitude}{16}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}Cross-section}{17}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Symmetric and antisymmetric parts of the cross-section}{17}{subsection.11.3}
+\contentsline {subsection}{\numberline {11.4}The gluon bubble}{18}{subsection.11.4}
+\contentsline {subsection}{\numberline {11.5}Non-bubble contributions of the non-abelian part}{19}{subsection.11.5}
+\contentsline {section}{\numberline {12}On the equivalence between using physical polarisations or unphysical plus ghost}{19}{section.12}
+\contentsline {subsection}{\numberline {12.1}Ghost-less approach}{19}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Approach with a ghosts}{20}{subsection.12.2}

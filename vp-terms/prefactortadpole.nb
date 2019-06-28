@@ -1,0 +1,136 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3571,        128]
+NotebookOptionsPosition[      3208,        110]
+NotebookOutlinePosition[      3564,        126]
+CellTagsIndexPosition[      3521,        123]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Pref", "=", 
+  RowBox[{"-", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["2", 
+      RowBox[{"2", "+", "ep"}]], " ", 
+     SuperscriptBox["E", 
+      RowBox[{"2", " ", "ep", " ", "EulerGamma"}]], " ", 
+     RowBox[{"Gamma", "[", 
+      RowBox[{"1", "-", "ep"}], "]"}]}], 
+    RowBox[{
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       FractionBox["1", "2"], "-", "ep"}], "]"}], " ", 
+     RowBox[{"Gamma", "[", 
+      RowBox[{
+       FractionBox["3", "2"], "-", "ep"}], "]"}]}]]}]}]], "Input",
+ CellChangeTimes->{{3.73561941448608*^9, 3.7356194193259163`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Prefap", "=", 
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["2", 
+       RowBox[{"2", "+", "ep"}]], " ", 
+      SuperscriptBox["E", 
+       RowBox[{"2", " ", "ep", " ", "EulerGamma"}]], " ", 
+      RowBox[{"Gamma", "[", 
+       RowBox[{"1", "-", "ep"}], "]"}]}], 
+     RowBox[{
+      RowBox[{"Gamma", "[", 
+       RowBox[{
+        FractionBox["1", "2"], "-", "ep"}], "]"}], " ", 
+      RowBox[{"Gamma", "[", 
+       RowBox[{
+        FractionBox["3", "2"], "-", "ep"}], "]"}]}]]}], 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"Gamma", "[", 
+       RowBox[{"1", "-", "ap", "-", "ep"}], "]"}], "2"], "/", 
+     RowBox[{"Gamma", "[", 
+      RowBox[{"2", "-", 
+       RowBox[{"2", "ap"}], "-", 
+       RowBox[{"2", "ep"}]}], "]"}]}], "/", 
+    RowBox[{"(", " ", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Gamma", "[", 
+        RowBox[{"1", "-", "ep"}], "]"}], "2"], "/", 
+      RowBox[{"Gamma", "[", 
+       RowBox[{"2", "-", 
+        RowBox[{"2", "ep"}]}], "]"}]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.73588416365499*^9, 3.735884174958042*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", 
+  FractionBox[
+   RowBox[{
+    SuperscriptBox["2", 
+     RowBox[{"2", "+", "ep"}]], " ", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"2", " ", "ep", " ", "EulerGamma"}]], " ", 
+    RowBox[{"Gamma", "[", 
+     RowBox[{"2", "-", 
+      RowBox[{"2", " ", "ep"}]}], "]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Gamma", "[", 
+      RowBox[{"1", "-", "ap", "-", "ep"}], "]"}], "2"]}], 
+   RowBox[{
+    RowBox[{"Gamma", "[", 
+     RowBox[{"2", "-", 
+      RowBox[{"2", " ", "ap"}], "-", 
+      RowBox[{"2", " ", "ep"}]}], "]"}], " ", 
+    RowBox[{"Gamma", "[", 
+     RowBox[{
+      FractionBox["1", "2"], "-", "ep"}], "]"}], " ", 
+    RowBox[{"Gamma", "[", 
+     RowBox[{"1", "-", "ep"}], "]"}], " ", 
+    RowBox[{"Gamma", "[", 
+     RowBox[{
+      FractionBox["3", "2"], "-", "ep"}], "]"}]}]]}]], "Output",
+ CellChangeTimes->{3.735884176621626*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{Automatic, 321}, {-40, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 589, 18, 62, "Input"],
+Cell[CellGroupData[{
+Cell[1172, 42, 1135, 36, 89, "Input"],
+Cell[2310, 80, 882, 27, 60, "Output"]
+}, Open  ]]
+}
+]
+*)
+

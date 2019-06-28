@@ -1,0 +1,15 @@
+# List of integrals needed for bubble graphs read off from
+# boundary-integrals.nb, section "General graphs - integrals approach". The
+# integrals below correspond to TopologyM. This file should be used as follows:
+#
+#     $ integrals-to-prototypes.py integrals_orig > integrals
+
+-1,0,0,1,1,1
+1,0,0,1,1,1
+0,0,2,0,1,1
+1,0,1,0,1,1
+2,0,2,0,1,1
+0,1,1,0,1,1  
+2,1,1,0,1,1  
+0,0,1,1,1,1
+2,0,1,1,1,1

@@ -1,0 +1,48 @@
+#------------------------------------------------------------------------------
+# Example usage:
+#------------------------------------------------------------------------------
+
+  $ ./generate-batch-files.py input-template.dat 0.0 0.0 --batch --all
+
+#------------------------------------------------------------------------------
+# Treating inf ouput
+#------------------------------------------------------------------------------
+
+  grep res* inf > 00inf.dat
+
+  generate input files
+
+  ./inf-list.py 00inf.dat > a
+ 
+  split -l 800 a
+
+  run individual files
+
+  ./inf-check.py 00inf.dat
+
+  ./inf-merge.py 00inf.dat --save
+
+#------------------------------------------------------------------------------
+# Producing replacement files
+#------------------------------------------------------------------------------
+
+  go to a folder, e.g. final-2cut
+
+  ../extract-results.py 2cut
+
+  this produces the files replacements2cut.m and errors2cut.m
+  
+#------------------------------------------------------------------------------
+# Checking completeness of comb files
+#------------------------------------------------------------------------------
+
+  ./check-completeness.py  (checks if there are res for all cols)
+
+#------------------------------------------------------------------------------
+# Results
+#------------------------------------------------------------------------------
+
+final-2cut     10^{-4} (almost because of the old approach to inf)
+final-bubble
+final-qbub     10^{-4}
+final-tadpole

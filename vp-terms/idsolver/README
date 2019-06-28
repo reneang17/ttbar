@@ -1,0 +1,14 @@
+#-----------------------------------------------------------------------------
+# 
+#-----------------------------------------------------------------------------
+
+
+  ./run.sh
+  ./solve-diffeqs.sh
+
+
+# Only to update list of integrals
+
+  $ generate-admin-files.py startinglistNNLO.txt 1 1 1 1 -1 -1
+
+  $ integrals-to-prototypes.py integrals_orig > integrals

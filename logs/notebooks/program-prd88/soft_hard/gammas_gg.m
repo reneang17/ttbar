@@ -1,0 +1,3 @@
+(* ::Package:: *)
+
+{{-((4 \[Alpha]s)/(3 \[Pi]))+(4 (1+xs^2) \[Alpha]s Log[xs])/(3 \[Pi] (-1+xs^2)),(\[Alpha]s Log[t1/u1])/\[Pi],0},{(2 \[Alpha]s Log[t1/u1])/\[Pi],-((4 \[Alpha]s)/(3 \[Pi]))-(3 \[Alpha]s Log[t1/u1])/(2 \[Pi])+(4 (1+xs^2) \[Alpha]s Log[xs])/(3 \[Pi] (-1+xs^2))+3/2 ((2 \[Alpha]s Log[t1/(mt s)])/\[Pi]-((1+xs^2) \[Alpha]s Log[xs])/(\[Pi] (-1+xs^2))),(5 \[Alpha]s Log[t1/u1])/(6 \[Pi])},{0,(3 \[Alpha]s Log[t1/u1])/(2 \[Pi]),-((4 \[Alpha]s)/(3 \[Pi]))-(3 \[Alpha]s Log[t1/u1])/(2 \[Pi])+(4 (1+xs^2) \[Alpha]s Log[xs])/(3 \[Pi] (-1+xs^2))+3/2 ((2 \[Alpha]s Log[t1/(mt s)])/\[Pi]-((1+xs^2) \[Alpha]s Log[xs])/(\[Pi] (-1+xs^2)))}}
